@@ -52,6 +52,12 @@
     <Compile Include="Alexis.Designer.cs">
       <DependentUpon>Alexis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Datos_Estudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos_Estudiante.Designer.cs">
+      <DependentUpon>Datos_Estudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <EmbeddedResource Include="Alexis.resx">
       <DependentUpon>Alexis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos_Estudiante.resx">
+      <DependentUpon>Datos_Estudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
