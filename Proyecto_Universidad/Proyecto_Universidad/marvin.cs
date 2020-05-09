@@ -16,5 +16,10 @@ namespace Proyecto_Universidad
         {
             InitializeComponent();
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -59,6 +59,7 @@
     <Compile Include="Ciclos_lista.Designer.cs">
       <DependentUpon>Ciclos_lista.cs</DependentUpon>
     </Compile>
+
     <Compile Include="marvin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +89,7 @@
     <EmbeddedResource Include="Alexis.resx">
       <DependentUpon>Alexis.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Ciclos_form.resx">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +101,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Municipio_lista.resx">
       <DependentUpon>Municipio_lista.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
