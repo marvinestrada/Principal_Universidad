@@ -52,6 +52,7 @@
     <Compile Include="Alexis.Designer.cs">
       <DependentUpon>Alexis.cs</DependentUpon>
     </Compile>
+
     <Compile Include="CRUD_estudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,10 +66,14 @@
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
+
+    <Compile Include="Conn.cs" />
+    <Compile Include="Catalogos\Ciclos_lista.cs">
+
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Catalogos\Ciclos_lista.Designer.cs">
+      <DependentUpon>Ciclos_lista.cs</DependentUpon>
     </Compile>
     <Compile Include="marvin.cs">
       <SubType>Form</SubType>
@@ -76,22 +81,48 @@
     <Compile Include="marvin.Designer.cs">
       <DependentUpon>marvin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tony.cs">
+    <Compile Include="Catalogos\Municipio_crear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tony.Designer.cs">
-      <DependentUpon>Tony.cs</DependentUpon>
+    <Compile Include="Catalogos\Municipio_crear.Designer.cs">
+      <DependentUpon>Municipio_crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Municipio_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Municipio_lista.Designer.cs">
+      <DependentUpon>Municipio_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Catalogos\Ciclos_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Ciclos_form.Designer.cs">
+      <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Alexis.resx">
       <DependentUpon>Alexis.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="CRUD_estudiante.resx">
       <DependentUpon>CRUD_estudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Datos_Estudiante.resx">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
+
+    <EmbeddedResource Include="Catalogos\Ciclos_form.resx">
+      <DependentUpon>Ciclos_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Ciclos_lista.resx">
+      <DependentUpon>Ciclos_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Municipio_crear.resx">
+      <DependentUpon>Municipio_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Municipio_lista.resx">
+      <DependentUpon>Municipio_lista.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
