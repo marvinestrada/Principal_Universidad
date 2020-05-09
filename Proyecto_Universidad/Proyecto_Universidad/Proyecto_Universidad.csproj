@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Establecimientos_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_form.Designer.cs">
+      <DependentUpon>Establecimientos_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_lista.Designer.cs">
+      <DependentUpon>Establecimientos_lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\CRUD_estudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +97,12 @@
     <Compile Include="Catalogos\Ciclos_form.Designer.cs">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
+      <DependentUpon>Establecimientos_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimientos_lista.resx">
+      <DependentUpon>Establecimientos_lista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\CRUD_estudiante.resx">
       <DependentUpon>CRUD_estudiante.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +140,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ventanas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
