@@ -101,6 +101,7 @@
             this.grid_datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_datos.Size = new System.Drawing.Size(651, 336);
             this.grid_datos.TabIndex = 15;
+            this.grid_datos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_datos_CellClick);
             // 
             // Id_municipio
             // 

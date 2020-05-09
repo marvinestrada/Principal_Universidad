@@ -31,6 +31,7 @@ namespace Proyecto_Universidad
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
+            bot_actualizar.Enabled = false;
         }
         private void bot_refrescar_Click(object sender, EventArgs e)
         {
@@ -74,6 +75,11 @@ namespace Proyecto_Universidad
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
             Municipio_lista_Load(null, null);
+        }
+
+        private void grid_datos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bot_actualizar.Enabled = true;
         }
     }
 }
