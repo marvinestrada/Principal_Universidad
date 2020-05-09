@@ -84,6 +84,7 @@
             this.btn_cerrar.TabIndex = 12;
             this.btn_cerrar.Text = "CANCELAR";
             this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // btn_aceptar
             // 
@@ -95,6 +96,7 @@
             this.btn_aceptar.TabIndex = 11;
             this.btn_aceptar.Text = "ACEPTAR";
             this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // Ciclos_form
             // 
@@ -110,7 +112,7 @@
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.Name = "Ciclos_form";
-            this.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.Padding = new System.Windows.Forms.Padding(11);
             this.Text = "Ingreso y Modificación";
             this.ResumeLayout(false);
             this.PerformLayout();

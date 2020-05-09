@@ -33,8 +33,8 @@
             this.boton_refrescar = new System.Windows.Forms.Button();
             this.bot_crear = new System.Windows.Forms.Button();
             this.grid_datos = new System.Windows.Forms.DataGridView();
-            this.Id_ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,42 +92,40 @@
             this.grid_datos.AllowUserToDeleteRows = false;
             this.grid_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_ciclo,
-            this.Ciclo});
-            this.grid_datos.Location = new System.Drawing.Point(16, 15);
-            this.grid_datos.Margin = new System.Windows.Forms.Padding(4);
+            this.Id_municipio,
+            this.Municipio});
+            this.grid_datos.Location = new System.Drawing.Point(16, 12);
             this.grid_datos.Name = "grid_datos";
             this.grid_datos.ReadOnly = true;
+            this.grid_datos.RowTemplate.Height = 24;
             this.grid_datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid_datos.Size = new System.Drawing.Size(651, 334);
-            this.grid_datos.TabIndex = 10;
+            this.grid_datos.Size = new System.Drawing.Size(651, 336);
+            this.grid_datos.TabIndex = 15;
             // 
-            // Id_ciclo
+            // Id_municipio
             // 
-            this.Id_ciclo.DataPropertyName = "id_municipio";
-            this.Id_ciclo.HeaderText = "Cod Municipio";
-            this.Id_ciclo.Name = "Id_ciclo";
-            this.Id_ciclo.ReadOnly = true;
-            this.Id_ciclo.Width = 150;
+            this.Id_municipio.DataPropertyName = "Id_municipio";
+            this.Id_municipio.HeaderText = "Cod Municipio";
+            this.Id_municipio.Name = "Id_municipio";
+            this.Id_municipio.ReadOnly = true;
             // 
-            // Ciclo
+            // Municipio
             // 
-            this.Ciclo.DataPropertyName = "municipio";
-            this.Ciclo.HeaderText = "Municipio";
-            this.Ciclo.Name = "Ciclo";
-            this.Ciclo.ReadOnly = true;
-            this.Ciclo.Width = 200;
+            this.Municipio.DataPropertyName = "Municipio";
+            this.Municipio.HeaderText = "Municipio";
+            this.Municipio.Name = "Municipio";
+            this.Municipio.ReadOnly = true;
             // 
             // Municipio_lista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 418);
+            this.Controls.Add(this.grid_datos);
             this.Controls.Add(this.bot_eliminar);
             this.Controls.Add(this.bot_actualizar);
             this.Controls.Add(this.boton_refrescar);
             this.Controls.Add(this.bot_crear);
-            this.Controls.Add(this.grid_datos);
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Municipio_lista";
             this.Text = "Municipios";
@@ -144,7 +142,7 @@
         private System.Windows.Forms.Button boton_refrescar;
         private System.Windows.Forms.Button bot_crear;
         private System.Windows.Forms.DataGridView grid_datos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_ciclo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ciclo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_municipio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Municipio;
     }
 }

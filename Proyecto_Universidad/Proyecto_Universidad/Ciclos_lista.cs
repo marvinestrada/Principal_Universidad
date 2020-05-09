@@ -74,7 +74,7 @@ namespace Proyecto_Universidad
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(grid_datos.CurrentRow.Cells[1].Value.ToString());
+           // MessageBox.Show(grid_datos.CurrentRow.Cells[1].Value.ToString());
             Ciclos_form ventana = new Ciclos_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();

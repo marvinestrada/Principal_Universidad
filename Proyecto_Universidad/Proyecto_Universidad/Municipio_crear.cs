@@ -15,7 +15,7 @@ namespace Proyecto_Universidad
     {
         public int id = 0;
         int Codigo = 0;
-        public Municipio_crear(int codigo = 0, string municipio = "")
+        public Municipio_crear( int codigo = 0, string municipio = "")
         {
             InitializeComponent();
             Codigo = codigo;
@@ -26,21 +26,21 @@ namespace Proyecto_Universidad
             if (Codigo != 0)
             {
                 SqlCommand com = new SqlCommand();
-                com = new SqlCommand("CRUD_Ciclo", Conn.sqlconeccion);
+                com = new SqlCommand("CRUD_Municipio", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 3);
-                com.Parameters.AddWithValue("id_municipio", Codigo);
-                com.Parameters.AddWithValue("municipio", txtmunicipio.Text);
+                com.Parameters.AddWithValue("Id_municipio", Codigo);
+                com.Parameters.AddWithValue("Municipio", txtmunicipio.Text);
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
             }
             else
             {
-                SqlCommand com = new SqlCommand("CRUD_Ciclo", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_Municipio", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 1);
-                com.Parameters.AddWithValue("municipio", txtmunicipio.Text);
+                com.Parameters.AddWithValue("Municipio", txtmunicipio.Text);
                 Conn.sqlconeccion.Open();
                 id = Convert.ToInt32(com.ExecuteScalar());
                 Conn.sqlconeccion.Close();
