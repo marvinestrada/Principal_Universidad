@@ -70,6 +70,18 @@
     <Compile Include="Catalogos\Estudiante_crear.Designer.cs">
       <DependentUpon>Estudiante_crear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Profesor_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Profesor_crear.Designer.cs">
+      <DependentUpon>Profesor_crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Profesor_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Profesor_lista.Designer.cs">
+      <DependentUpon>Profesor_lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conn.cs" />
     <Compile Include="Catalogos\Ciclos_lista.cs">
       <SubType>Form</SubType>
@@ -120,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Municipio_lista.resx">
       <DependentUpon>Municipio_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Profesor_crear.resx">
+      <DependentUpon>Profesor_crear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
