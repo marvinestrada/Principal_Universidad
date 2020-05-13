@@ -136,6 +136,9 @@
     <EmbeddedResource Include="Catalogos\Profesor_crear.resx">
       <DependentUpon>Profesor_crear.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Profesor_lista.resx">
+      <DependentUpon>Profesor_lista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
