@@ -28,11 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btn_aceptar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Location = new System.Drawing.Point(21, 57);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(100, 41);
+            this.btn_aceptar.TabIndex = 0;
+            this.btn_aceptar.Text = "button1";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // marvin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btn_aceptar);
+            this.Name = "marvin";
             this.Text = "marvin";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_aceptar;
     }
 }
