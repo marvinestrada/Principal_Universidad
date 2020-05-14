@@ -16,7 +16,7 @@ namespace Proyecto_Universidad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Establecimientos_lista());
+            Application.Run(new CRUD_estudiante());
         }
     }
 }

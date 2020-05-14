@@ -55,9 +55,9 @@ namespace Proyecto_Universidad
             }
             CRUD_estudiante_Load(null, null);
         }
-        private void bot_crear_Click(object sender, EventArgs e)
+        private void btnCrear_Click(object sender, EventArgs e)
         {
-            Ciclos_form ventana = new Ciclos_form();
+            Datos_Estudiante ventana = new Datos_Estudiante();
             ventana.ShowDialog();
             int cod = ventana.id;
             ventana.Dispose();
@@ -70,13 +70,17 @@ namespace Proyecto_Universidad
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
             MessageBox.Show(data_ListEstu.CurrentRow.Cells[1].Value.ToString());
-            Ciclos_form ventana = new Ciclos_form(Convert.ToInt32(data_ListEstu.CurrentRow.Cells[0].Value), data_ListEstu.CurrentRow.Cells[1].Value.ToString(), data_ListEstu.CurrentRow.Cells[2].Value.ToString());
+            Datos_Estudiante ventana = new Datos_Estudiante(Convert.ToInt32(data_ListEstu.CurrentRow.Cells[0].Value), data_ListEstu.CurrentRow.Cells[1].Value.ToString(), data_ListEstu.CurrentRow.Cells[2].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
             CRUD_estudiante_Load(null, null);
         
 
+    
+
+        
+
+        }
     }
-  }
 }

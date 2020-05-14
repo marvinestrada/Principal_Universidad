@@ -75,6 +75,7 @@
             this.btnCrear.TabIndex = 7;
             this.btnCrear.Text = "CREAR";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // data_ListEstu
             // 
