@@ -98,6 +98,7 @@
             this.Name = "CRUD_estudiante";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "CRUD_estudiante";
+            this.Load += new System.EventHandler(this.CRUD_estudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_ListEstu)).EndInit();
             this.ResumeLayout(false);
 
