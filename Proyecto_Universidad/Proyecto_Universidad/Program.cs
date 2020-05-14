@@ -16,7 +16,7 @@ namespace Proyecto_Universidad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Municipio_lista());
+            Application.Run(new Establecimiento_lista());
         }
     }
 }
