@@ -51,5 +51,15 @@ namespace Proyecto_Universidad
         {
             this.Close();
         }
+
+        private void txtmunicipio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Municipio_crear_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

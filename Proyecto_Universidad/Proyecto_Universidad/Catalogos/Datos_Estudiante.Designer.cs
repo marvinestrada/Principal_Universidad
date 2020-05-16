@@ -111,6 +111,7 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(209, 32);
             this.txtNom.TabIndex = 10;
+            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
             // btnCancelar
             // 

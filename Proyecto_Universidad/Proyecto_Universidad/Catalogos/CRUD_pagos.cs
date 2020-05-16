@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Universidad
+namespace Proyecto_Universidad.Catalogos
 {
-    public partial class CRUD_estudiante : Form
+    public partial class CRUD_pagos : Form
     {
-        public CRUD_estudiante()
+        public CRUD_pagos()
         {
             InitializeComponent();
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRefrescar_Click(object sender, EventArgs e)
+        private void bot_crear_Click(object sender, EventArgs e)
         {
 
         }

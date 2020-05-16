@@ -65,6 +65,7 @@
             this.btnRefrescar.TabIndex = 8;
             this.btnRefrescar.Text = "REFRESH";
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnCrear
             // 
@@ -75,6 +76,7 @@
             this.btnCrear.TabIndex = 7;
             this.btnCrear.Text = "CREAR";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // data_ListEstu
             // 
