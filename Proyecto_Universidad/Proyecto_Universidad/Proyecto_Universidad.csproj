@@ -70,6 +70,18 @@
     <Compile Include="Catalogos\Datos_Estudiante.Designer.cs">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Establecimiento_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimiento_form.Designer.cs">
+      <DependentUpon>Establecimiento_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Establecimiento_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimiento_lista.Designer.cs">
+      <DependentUpon>Establecimiento_lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conn.cs" />
     <Compile Include="Catalogos\Ciclos_lista.cs">
       <SubType>Form</SubType>
@@ -88,6 +100,12 @@
     </Compile>
     <Compile Include="Catalogos\Municipio_lista.Designer.cs">
       <DependentUpon>Municipio_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Ciclos_lista.resx">
       <DependentUpon>Ciclos_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimiento_form.resx">
+      <DependentUpon>Establecimiento_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimiento_lista.resx">
+      <DependentUpon>Establecimiento_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Municipio_crear.resx">
       <DependentUpon>Municipio_crear.cs</DependentUpon>
