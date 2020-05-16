@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Universidad
+namespace Proyecto_Universidad.Catalogos
 {
-    public partial class marvin : Form
+    public partial class Profesor_crear : Form
     {
-        public marvin()
+        public Profesor_crear()
         {
             InitializeComponent();
-        }
-
-        private void btn_aceptar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Universidad
 {
-    public partial class Alexis : Form
+    public partial class Form1 : Form
     {
-        public Alexis()
+        public Form1()
         {
             InitializeComponent();
         }

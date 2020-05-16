@@ -75,6 +75,7 @@
             this.btnCrear.TabIndex = 7;
             this.btnCrear.Text = "CREAR";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // data_ListEstu
             // 
@@ -98,6 +99,7 @@
             this.Name = "CRUD_estudiante";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "CRUD_estudiante";
+            this.Load += new System.EventHandler(this.CRUD_estudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_ListEstu)).EndInit();
             this.ResumeLayout(false);
 
