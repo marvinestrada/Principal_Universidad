@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Proyecto_Universidad.Catalogos
 {
-    public partial class Crear_Pagos : Form
+    
+    public partial class CRUD_pagos_crear : Form
+
     {
         public int id = 0;
-        int Codigo = 0;
-
-        public Crear_Pagos()
-        {
-        }
-
-        public Crear_Pagos(int v, string v1)
+        public CRUD_pagos_crear(int valor, string texto )
         {
             InitializeComponent();
-            
+        }
+
+        private void CRUD_pagos_crear_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
