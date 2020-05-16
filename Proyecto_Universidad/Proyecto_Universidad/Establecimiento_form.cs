@@ -9,12 +9,12 @@ namespace Proyecto_Universidad
     {
         public int id = 0;
         int Codigo = 0;
-        public Establecimiento_form(int codigo = 0, string establecimiento = "", string Id_municipio = "")
+        public Establecimiento_form(int codigo = 0, string Establecimiento = "", string Id_municipio = "")
         {
             InitializeComponent();
             Codigo = codigo;
-            txtestablecimiento.Text = establecimiento;
-            txtid_municipio.Text = Id_municipio;
+            txtestablecimiento.Text = Establecimiento;
+            txtmunicipio.Text = Id_municipio;
         }
         private void btn_aceptar_Click(object sender, System.EventArgs e)
         {
@@ -26,7 +26,7 @@ namespace Proyecto_Universidad
                 com.Parameters.AddWithValue("CRUD", 3);
                 com.Parameters.AddWithValue("Id_establecimiento", Codigo);
                 com.Parameters.AddWithValue("Establecimiento", txtestablecimiento.Text);
-                com.Parameters.AddWithValue("Id_municipio", txtid_municipio.Text);
+                com.Parameters.AddWithValue("Id_municipio", txtmunicipio.Text);
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -37,7 +37,7 @@ namespace Proyecto_Universidad
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 1);
                 com.Parameters.AddWithValue("Establecimiento", txtestablecimiento.Text);
-                com.Parameters.AddWithValue("Id_municipio", txtid_municipio.Text);
+                com.Parameters.AddWithValue("Id_municipio", txtmunicipio.Text);
                 Conn.sqlconeccion.Open();
                 id = Convert.ToInt32(com.ExecuteScalar());
                 Conn.sqlconeccion.Close();

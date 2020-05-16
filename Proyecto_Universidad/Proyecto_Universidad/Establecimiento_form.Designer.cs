@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtid_municipio = new System.Windows.Forms.TextBox();
+            this.txtmunicipio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtestablecimiento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,41 +36,41 @@
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtid_municipio
+            // txtmunicipio
             // 
-            this.txtid_municipio.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid_municipio.Location = new System.Drawing.Point(215, 55);
-            this.txtid_municipio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtid_municipio.Name = "txtid_municipio";
-            this.txtid_municipio.Size = new System.Drawing.Size(380, 31);
-            this.txtid_municipio.TabIndex = 22;
+            this.txtmunicipio.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmunicipio.Location = new System.Drawing.Point(208, 55);
+            this.txtmunicipio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmunicipio.Name = "txtmunicipio";
+            this.txtmunicipio.Size = new System.Drawing.Size(387, 31);
+            this.txtmunicipio.TabIndex = 22;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 58);
+            this.label3.Location = new System.Drawing.Point(22, 59);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 28);
+            this.label3.Size = new System.Drawing.Size(191, 28);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Id Municipio:";
+            this.label3.Text = "ID Municipio:";
             // 
             // txtestablecimiento
             // 
             this.txtestablecimiento.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtestablecimiento.Location = new System.Drawing.Point(215, 16);
+            this.txtestablecimiento.Location = new System.Drawing.Point(208, 16);
             this.txtestablecimiento.Margin = new System.Windows.Forms.Padding(4);
             this.txtestablecimiento.Name = "txtestablecimiento";
-            this.txtestablecimiento.Size = new System.Drawing.Size(380, 31);
+            this.txtestablecimiento.Size = new System.Drawing.Size(387, 31);
             this.txtestablecimiento.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 16);
+            this.label2.Location = new System.Drawing.Point(22, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 28);
+            this.label2.Size = new System.Drawing.Size(191, 28);
             this.label2.TabIndex = 19;
             this.label2.Text = "Establecimiento:";
             // 
@@ -103,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 661);
-            this.Controls.Add(this.txtid_municipio);
+            this.Controls.Add(this.txtmunicipio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtestablecimiento);
             this.Controls.Add(this.label2);
@@ -112,8 +112,7 @@
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.Name = "Establecimiento_form";
-            this.Padding = new System.Windows.Forms.Padding(10);
-            this.Text = "Ingreso y Modificación";
+            this.Text = "Establecimiento_form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +120,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtid_municipio;
+        private System.Windows.Forms.TextBox txtmunicipio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtestablecimiento;
         private System.Windows.Forms.Label label2;
