@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Universidad
+namespace Proyecto_Universidad.Catalogos
 {
-    public partial class CRUD_estudiante : Form
+    public partial class Profesor_crear : Form
     {
-        public CRUD_estudiante()
+        public Profesor_crear()
         {
             InitializeComponent();
         }

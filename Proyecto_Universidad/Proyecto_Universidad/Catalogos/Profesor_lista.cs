@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Universidad
+namespace Proyecto_Universidad.Catalogos
 {
-    public partial class Datos_Estudiante : Form
+    public partial class Profesor_lista : Form
     {
-        public Datos_Estudiante()
+        public Profesor_lista()
         {
             InitializeComponent();
         }
