@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\..\..\Desktop\proyecto final\Carrera_crear.cs">
+      <SubType>Form</SubType>
+      <Link>Catalogos\Carrera_crear.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Desktop\proyecto final\Carrera_crear.Designer.cs">
+      <DependentUpon>Carrera_crear.cs</DependentUpon>
+      <Link>Catalogos\Carrera_crear.Designer.cs</Link>
+    </Compile>
     <Compile Include="Catalogos\Establecimientos_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +77,12 @@
     </Compile>
     <Compile Include="Catalogos\Estudiante_crear.Designer.cs">
       <DependentUpon>Estudiante_crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Carrera_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Carrera_lista.Designer.cs">
+      <DependentUpon>Carrera_lista.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Profesor_crear.cs">
       <SubType>Form</SubType>
@@ -109,6 +123,10 @@
     <Compile Include="Catalogos\Ciclos_form.Designer.cs">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="..\..\..\..\..\Desktop\proyecto final\Carrera_crear.resx">
+      <DependentUpon>Carrera_crear.cs</DependentUpon>
+      <Link>Catalogos\Carrera_crear.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
       <DependentUpon>Establecimientos_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Ciclos_lista.resx">
       <DependentUpon>Ciclos_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Carrera_lista.resx">
+      <DependentUpon>Carrera_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Municipio_crear.resx">
       <DependentUpon>Municipio_crear.cs</DependentUpon>
