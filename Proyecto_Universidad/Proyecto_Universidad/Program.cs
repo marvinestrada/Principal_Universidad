@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_Universidad.Catalogos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Proyecto_Universidad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Establecimientos_lista());
+            Application.Run(new CRUD_pagos());
         }
     }
 }

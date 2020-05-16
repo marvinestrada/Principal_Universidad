@@ -76,6 +76,12 @@
     <Compile Include="Catalogos\Datos_Estudiante.Designer.cs">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Crear_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Crear_Pagos.Designer.cs">
+      <DependentUpon>Crear_Pagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conn.cs" />
     <Compile Include="Catalogos\Ciclos_lista.cs">
       <SubType>Form</SubType>
@@ -103,6 +109,9 @@
     <Compile Include="Catalogos\Ciclos_form.Designer.cs">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogos\Crear_Pagos.resx">
+      <DependentUpon>Crear_Pagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\CRUD_pagos.resx">
       <DependentUpon>CRUD_pagos.cs</DependentUpon>
     </EmbeddedResource>

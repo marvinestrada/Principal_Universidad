@@ -32,11 +32,10 @@
             this.bot_actualizar = new System.Windows.Forms.Button();
             this.boton_refrescar = new System.Windows.Forms.Button();
             this.bot_crear = new System.Windows.Forms.Button();
-            this.grid_datos = new System.Windows.Forms.DataGridView();
-            this.Id_establecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Establecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).BeginInit();
+            this.datosgrid = new System.Windows.Forms.DataGridView();
+            this.Fecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_cobro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.datosgrid)).BeginInit();
             this.SuspendLayout();
             // 
             // bot_eliminar
@@ -49,6 +48,7 @@
             this.bot_eliminar.TabIndex = 13;
             this.bot_eliminar.Text = "ELIMINAR";
             this.bot_eliminar.UseVisualStyleBackColor = true;
+            this.bot_eliminar.Click += new System.EventHandler(this.bot_eliminar_Click);
             // 
             // bot_actualizar
             // 
@@ -60,6 +60,7 @@
             this.bot_actualizar.TabIndex = 12;
             this.bot_actualizar.Text = "ACTUALIZAR";
             this.bot_actualizar.UseVisualStyleBackColor = true;
+            this.bot_actualizar.Click += new System.EventHandler(this.bot_actualizar_Click);
             // 
             // boton_refrescar
             // 
@@ -71,6 +72,7 @@
             this.boton_refrescar.TabIndex = 11;
             this.boton_refrescar.Text = "REFRESH";
             this.boton_refrescar.UseVisualStyleBackColor = true;
+            this.boton_refrescar.Click += new System.EventHandler(this.boton_refrescar_Click);
             // 
             // bot_crear
             // 
@@ -84,59 +86,45 @@
             this.bot_crear.UseVisualStyleBackColor = true;
             this.bot_crear.Click += new System.EventHandler(this.bot_crear_Click);
             // 
-            // grid_datos
+            // datosgrid
             // 
-            this.grid_datos.AllowUserToAddRows = false;
-            this.grid_datos.AllowUserToDeleteRows = false;
-            this.grid_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_establecimiento,
-            this.Establecimiento,
-            this.Id_municipio});
-            this.grid_datos.Location = new System.Drawing.Point(18, 16);
-            this.grid_datos.Margin = new System.Windows.Forms.Padding(4);
-            this.grid_datos.Name = "grid_datos";
-            this.grid_datos.ReadOnly = true;
-            this.grid_datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid_datos.Size = new System.Drawing.Size(651, 334);
-            this.grid_datos.TabIndex = 14;
+            this.datosgrid.AllowUserToAddRows = false;
+            this.datosgrid.AllowUserToDeleteRows = false;
+            this.datosgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datosgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Fecha_pago,
+            this.Id_cobro});
+            this.datosgrid.Location = new System.Drawing.Point(17, 12);
+            this.datosgrid.Name = "datosgrid";
+            this.datosgrid.ReadOnly = true;
+            this.datosgrid.Size = new System.Drawing.Size(651, 328);
+            this.datosgrid.TabIndex = 14;
             // 
-            // Id_establecimiento
+            // Fecha_pago
             // 
-            this.Id_establecimiento.DataPropertyName = "Id_establecimiento";
-            this.Id_establecimiento.HeaderText = "Cod Establecimiento";
-            this.Id_establecimiento.Name = "Id_establecimiento";
-            this.Id_establecimiento.ReadOnly = true;
-            this.Id_establecimiento.Width = 150;
+            this.Fecha_pago.HeaderText = "Fecha";
+            this.Fecha_pago.Name = "Fecha_pago";
+            this.Fecha_pago.ReadOnly = true;
             // 
-            // Establecimiento
+            // Id_cobro
             // 
-            this.Establecimiento.DataPropertyName = "Establecimiento";
-            this.Establecimiento.HeaderText = "Establecimiento";
-            this.Establecimiento.Name = "Establecimiento";
-            this.Establecimiento.ReadOnly = true;
-            this.Establecimiento.Width = 200;
-            // 
-            // Id_municipio
-            // 
-            this.Id_municipio.DataPropertyName = "Id_municipio";
-            this.Id_municipio.HeaderText = "Cod Municipio";
-            this.Id_municipio.Name = "Id_municipio";
-            this.Id_municipio.ReadOnly = true;
+            this.Id_cobro.HeaderText = "Monto";
+            this.Id_cobro.Name = "Id_cobro";
+            this.Id_cobro.ReadOnly = true;
             // 
             // CRUD_pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 418);
-            this.Controls.Add(this.grid_datos);
+            this.Controls.Add(this.datosgrid);
             this.Controls.Add(this.bot_eliminar);
             this.Controls.Add(this.bot_actualizar);
             this.Controls.Add(this.boton_refrescar);
             this.Controls.Add(this.bot_crear);
             this.Name = "CRUD_pagos";
             this.Text = "CRUD_pagos";
-            ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosgrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,9 +135,8 @@
         private System.Windows.Forms.Button bot_actualizar;
         private System.Windows.Forms.Button boton_refrescar;
         private System.Windows.Forms.Button bot_crear;
-        private System.Windows.Forms.DataGridView grid_datos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_establecimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Establecimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_municipio;
+        private System.Windows.Forms.DataGridView datosgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_pago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_cobro;
     }
 }
