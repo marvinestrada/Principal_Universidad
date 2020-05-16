@@ -1,4 +1,4 @@
-﻿namespace Proyecto_Universidad
+namespace Proyecto_Universidad
 {
     partial class CRUD_estudiante
     {
