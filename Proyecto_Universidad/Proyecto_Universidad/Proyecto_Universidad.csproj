@@ -82,6 +82,18 @@
     <Compile Include="Catalogos\Profesor_lista.Designer.cs">
       <DependentUpon>Profesor_lista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Tipo_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Tipo_crear.Designer.cs">
+      <DependentUpon>Tipo_crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Tipo_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Tipo_lista.Designer.cs">
+      <DependentUpon>Tipo_lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conn.cs" />
     <Compile Include="Catalogos\Ciclos_lista.cs">
       <SubType>Form</SubType>
@@ -138,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Profesor_lista.resx">
       <DependentUpon>Profesor_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Tipo_crear.resx">
+      <DependentUpon>Tipo_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Tipo_lista.resx">
+      <DependentUpon>Tipo_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
