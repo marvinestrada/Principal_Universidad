@@ -8,13 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Universidad
+namespace Proyecto_Universidad.Catalogos
 {
-    public partial class Alexis : Form
+    
+    public partial class CRUD_pagos_crear : Form
+
     {
-        public Alexis()
+        public int id = 0;
+        public CRUD_pagos_crear(int valor, string texto )
         {
             InitializeComponent();
+        }
+
+        private void CRUD_pagos_crear_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,77 +46,203 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alexis.cs">
+    <Compile Include="Catalogos\CRUD_pagos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alexis.Designer.cs">
-      <DependentUpon>Alexis.cs</DependentUpon>
+    <Compile Include="Catalogos\CRUD_pagos.Designer.cs">
+      <DependentUpon>CRUD_pagos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conn.cs" />
-    <Compile Include="Ciclos_lista.cs">
+       <Compile Include="Catalogos\Carrera_crear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ciclos_lista.Designer.cs">
-      <DependentUpon>Ciclos_lista.cs</DependentUpon>
+    <Compile Include="Catalogos\Carrera_crear.Designer.cs">
+      <DependentUpon>Carrera_crear.cs</DependentUpon>
     </Compile>
-    <Compile Include="Establecimiento_form.cs">
+    <Compile Include="Catalogos\Carrera_lista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Establecimiento_form.Designer.cs">
+    <Compile Include="Catalogos\Carrera_lista.Designer.cs">
+      <DependentUpon>Carrera_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_estudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_estudiante.Designer.cs">
+      <DependentUpon>CRUD_estudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_pagos.Designer.cs">
+      <DependentUpon>CRUD_pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_pagos_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_pagos_crear.Designer.cs">
+      <DependentUpon>CRUD_pagos_crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Datos_Estudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Datos_Estudiante.Designer.cs">
+      <DependentUpon>Datos_Estudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_pagos_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_pagos_crear.Designer.cs">
+      <DependentUpon>CRUD_pagos_crear.cs</DependentUpon>
+</Compile>
+      <Compile Include="Catalogos\Establecimientos_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_form.Designer.cs">
+      <DependentUpon>Establecimientos_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_lista.Designer.cs">
+      <DependentUpon>Establecimientos_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Establecimiento_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimiento_form.Designer.cs">
       <DependentUpon>Establecimiento_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Establecimiento_lista.cs">
+    <Compile Include="Catalogos\Establecimiento_lista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Establecimiento_lista.Designer.cs">
+    <Compile Include="Catalogos\Establecimiento_lista.Designer.cs">
       <DependentUpon>Establecimiento_lista.cs</DependentUpon>
     </Compile>
-    <Compile Include="marvin.cs">
+    <Compile Include="Catalogos\Estudiante_crear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="marvin.Designer.cs">
-      <DependentUpon>marvin.cs</DependentUpon>
+    <Compile Include="Catalogos\Estudiante_crear.Designer.cs">
+      <DependentUpon>Estudiante_crear.cs</DependentUpon>
     </Compile>
-    <Compile Include="Municipio_crear.cs">
+    <Compile Include="Catalogos\Estudiante_lista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Municipio_crear.Designer.cs">
+    <Compile Include="Catalogos\Estudiante_lista.Designer.cs">
+      <DependentUpon>Estudiante_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Profesor_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Profesor_crear.Designer.cs">
+      <DependentUpon>Profesor_crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Profesor_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Profesor_lista.Designer.cs">
+      <DependentUpon>Profesor_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Tipo_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Tipo_crear.Designer.cs">
+      <DependentUpon>Tipo_crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Tipo_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Tipo_lista.Designer.cs">
+      <DependentUpon>Tipo_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conn.cs" />
+    <Compile Include="Catalogos\Ciclos_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Ciclos_lista.Designer.cs">
+      <DependentUpon>Ciclos_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Municipio_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Municipio_crear.Designer.cs">
       <DependentUpon>Municipio_crear.cs</DependentUpon>
     </Compile>
-    <Compile Include="Municipio_lista.cs">
+    <Compile Include="Catalogos\Municipio_lista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Municipio_lista.Designer.cs">
+    <Compile Include="Catalogos\Municipio_lista.Designer.cs">
       <DependentUpon>Municipio_lista.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ciclos_form.cs">
+    <Compile Include="Catalogos\Ciclos_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ciclos_form.Designer.cs">
+    <Compile Include="Catalogos\Ciclos_form.Designer.cs">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Alexis.resx">
-      <DependentUpon>Alexis.cs</DependentUpon>
+    <EmbeddedResource Include="Catalogos\CRUD_pagos.resx">
+      <DependentUpon>CRUD_pagos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ciclos_form.resx">
+    <EmbeddedResource Include="Catalogos\CRUD_pagos_crear.resx">
+      <DependentUpon>CRUD_pagos_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
+      <DependentUpon>Establecimientos_form.cs</DependentUpon>
+     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Carrera_crear.resx">
+      <DependentUpon>Carrera_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Carrera_lista.resx">
+      <DependentUpon>Carrera_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\CRUD_estudiante.resx">
+      <DependentUpon>CRUD_estudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\CRUD_pagos.resx">
+      <DependentUpon>CRUD_pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\CRUD_pagos_crear.resx">
+      <DependentUpon>CRUD_pagos_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Datos_Estudiante.resx">
+      <DependentUpon>Datos_Estudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
+      <DependentUpon>Establecimientos_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimientos_lista.resx">
+      <DependentUpon>Establecimientos_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Estudiante_crear.resx">
+      <DependentUpon>Estudiante_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Estudiante_lista.resx">
+      <DependentUpon>Estudiante_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Ciclos_form.resx">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ciclos_lista.resx">
+    <EmbeddedResource Include="Catalogos\Ciclos_lista.resx">
       <DependentUpon>Ciclos_lista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Establecimiento_form.resx">
-      <DependentUpon>Establecimiento_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Establecimiento_lista.resx">
-      <DependentUpon>Establecimiento_lista.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Municipio_crear.resx">
+    <EmbeddedResource Include="Catalogos\Municipio_crear.resx">
       <DependentUpon>Municipio_crear.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Municipio_lista.resx">
+    <EmbeddedResource Include="Catalogos\Municipio_lista.resx">
       <DependentUpon>Municipio_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Profesor_crear.resx">
+      <DependentUpon>Profesor_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Profesor_lista.resx">
+      <DependentUpon>Profesor_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Tipo_crear.resx">
+      <DependentUpon>Tipo_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Tipo_lista.resx">
+      <DependentUpon>Tipo_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,9 +262,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Folder Include="Ventanas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
