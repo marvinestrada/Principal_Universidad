@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Universidad
+namespace Proyecto_Universidad.Catalogos
 {
-    public partial class Datos_Estudiante_ : Form
+    public partial class Tipo_crear : Form
     {
-        public Datos_Estudiante_()
+        public Tipo_crear()
         {
             InitializeComponent();
-        }
-
-        private void txtNom_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

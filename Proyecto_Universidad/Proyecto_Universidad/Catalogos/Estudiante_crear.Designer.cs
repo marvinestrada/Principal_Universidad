@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Universidad
 {
-    partial class Datos_Estudiante_
+    partial class Datos_Estudiante
     {
         /// <summary>
         /// Required designer variable.
@@ -32,10 +32,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txttel = new System.Windows.Forms.TextBox();
-            this.txtdir = new System.Windows.Forms.TextBox();
-            this.txtape = new System.Windows.Forms.TextBox();
-            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txttelEstu = new System.Windows.Forms.TextBox();
+            this.txtdirEstu = new System.Windows.Forms.TextBox();
+            this.txtapeEstu = new System.Windows.Forms.TextBox();
+            this.txtNomEstu = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -80,38 +80,37 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Apellidos:";
             // 
-            // txttel
+            // txttelEstu
             // 
-            this.txttel.Location = new System.Drawing.Point(135, 203);
-            this.txttel.Multiline = true;
-            this.txttel.Name = "txttel";
-            this.txttel.Size = new System.Drawing.Size(155, 35);
-            this.txttel.TabIndex = 13;
+            this.txttelEstu.Location = new System.Drawing.Point(135, 203);
+            this.txttelEstu.Multiline = true;
+            this.txttelEstu.Name = "txttelEstu";
+            this.txttelEstu.Size = new System.Drawing.Size(155, 35);
+            this.txttelEstu.TabIndex = 13;
             // 
-            // txtdir
+            // txtdirEstu
             // 
-            this.txtdir.Location = new System.Drawing.Point(135, 144);
-            this.txtdir.Multiline = true;
-            this.txtdir.Name = "txtdir";
-            this.txtdir.Size = new System.Drawing.Size(209, 32);
-            this.txtdir.TabIndex = 12;
+            this.txtdirEstu.Location = new System.Drawing.Point(135, 144);
+            this.txtdirEstu.Multiline = true;
+            this.txtdirEstu.Name = "txtdirEstu";
+            this.txtdirEstu.Size = new System.Drawing.Size(209, 32);
+            this.txtdirEstu.TabIndex = 12;
             // 
-            // txtape
+            // txtapeEstu
             // 
-            this.txtape.Location = new System.Drawing.Point(135, 85);
-            this.txtape.Multiline = true;
-            this.txtape.Name = "txtape";
-            this.txtape.Size = new System.Drawing.Size(209, 32);
-            this.txtape.TabIndex = 11;
+            this.txtapeEstu.Location = new System.Drawing.Point(135, 85);
+            this.txtapeEstu.Multiline = true;
+            this.txtapeEstu.Name = "txtapeEstu";
+            this.txtapeEstu.Size = new System.Drawing.Size(209, 32);
+            this.txtapeEstu.TabIndex = 11;
             // 
-            // txtNom
+            // txtNomEstu
             // 
-            this.txtNom.Location = new System.Drawing.Point(135, 28);
-            this.txtNom.Multiline = true;
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(209, 32);
-            this.txtNom.TabIndex = 10;
-            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
+            this.txtNomEstu.Location = new System.Drawing.Point(135, 28);
+            this.txtNomEstu.Multiline = true;
+            this.txtNomEstu.Name = "txtNomEstu";
+            this.txtNomEstu.Size = new System.Drawing.Size(209, 32);
+            this.txtNomEstu.TabIndex = 10;
             // 
             // btnCancelar
             // 
@@ -132,6 +131,7 @@
             this.btnAceptar.TabIndex = 14;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // Datos_Estudiante
             // 
@@ -140,10 +140,10 @@
             this.ClientSize = new System.Drawing.Size(464, 537);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txttel);
-            this.Controls.Add(this.txtdir);
-            this.Controls.Add(this.txtape);
-            this.Controls.Add(this.txtNom);
+            this.Controls.Add(this.txttelEstu);
+            this.Controls.Add(this.txtdirEstu);
+            this.Controls.Add(this.txtapeEstu);
+            this.Controls.Add(this.txtNomEstu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -163,10 +163,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txttel;
-        private System.Windows.Forms.TextBox txtdir;
-        private System.Windows.Forms.TextBox txtape;
-        private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.TextBox txttelEstu;
+        private System.Windows.Forms.TextBox txtdirEstu;
+        private System.Windows.Forms.TextBox txtapeEstu;
+        private System.Windows.Forms.TextBox txtNomEstu;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
     }

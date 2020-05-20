@@ -1,6 +1,6 @@
-namespace Proyecto_Universidad
+﻿namespace Proyecto_Universidad
 {
-    partial class CRUD_estudiante_
+    partial class CRUD_estudiante
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,6 @@ namespace Proyecto_Universidad
             this.btnRefrescar.TabIndex = 8;
             this.btnRefrescar.Text = "REFRESH";
             this.btnRefrescar.UseVisualStyleBackColor = true;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnCrear
             // 
@@ -100,6 +99,7 @@ namespace Proyecto_Universidad
             this.Name = "CRUD_estudiante";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "CRUD_estudiante";
+            this.Load += new System.EventHandler(this.CRUD_estudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_ListEstu)).EndInit();
             this.ResumeLayout(false);
 
