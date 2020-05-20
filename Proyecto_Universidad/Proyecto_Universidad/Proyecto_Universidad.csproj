@@ -46,7 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Catalogos\Carrera_crear.cs">
+    <Compile Include="Catalogos\CRUD_pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_pagos.Designer.cs">
+      <DependentUpon>CRUD_pagos.cs</DependentUpon>
+    </Compile>
+       <Compile Include="Catalogos\Carrera_crear.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogos\Carrera_crear.Designer.cs">
@@ -82,7 +88,13 @@
     <Compile Include="Catalogos\Datos_Estudiante.Designer.cs">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\Establecimientos_form.cs">
+    <Compile Include="Catalogos\CRUD_pagos_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CRUD_pagos_crear.Designer.cs">
+      <DependentUpon>CRUD_pagos_crear.cs</DependentUpon>
+</Compile>
+      <Compile Include="Catalogos\Establecimientos_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogos\Establecimientos_form.Designer.cs">
@@ -169,6 +181,15 @@
     <Compile Include="Catalogos\Ciclos_form.Designer.cs">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogos\CRUD_pagos.resx">
+      <DependentUpon>CRUD_pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\CRUD_pagos_crear.resx">
+      <DependentUpon>CRUD_pagos_crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
+      <DependentUpon>Establecimientos_form.cs</DependentUpon>
+     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Carrera_crear.resx">
       <DependentUpon>Carrera_crear.cs</DependentUpon>
     </EmbeddedResource>
