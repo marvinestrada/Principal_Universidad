@@ -37,7 +37,7 @@ namespace Proyecto_Universidad.Catalogos
 
         private void bot_crear_Click(object sender, EventArgs e)
         {
-            Crear_Pagos ventana = new Crear_Pagos();
+            CRUD_pagos_crear ventana = new CRUD_pagos_crear(1,"");
             ventana.ShowDialog();
             int cod = ventana.id;
             ventana.Dispose();
@@ -55,7 +55,7 @@ namespace Proyecto_Universidad.Catalogos
 
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-            Crear_Pagos ventana = new Crear_Pagos(Convert.ToInt32(datosgrid.CurrentRow.Cells[1].Value), datosgrid.CurrentRow.Cells[0].Value.ToString());
+            CRUD_pagos_crear ventana = new CRUD_pagos_crear(Convert.ToInt32(datosgrid.CurrentRow.Cells[1].Value), datosgrid.CurrentRow.Cells[0].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
