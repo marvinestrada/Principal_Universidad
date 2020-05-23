@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.9.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Pensum_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Pensum_form.Designer.cs">
+      <DependentUpon>Pensum_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Carrera_crear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +125,12 @@
     <Compile Include="Catalogos\Estudiante_lista.Designer.cs">
       <DependentUpon>Estudiante_lista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Pensum_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Pensum_lista.Designer.cs">
+      <DependentUpon>Pensum_lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Profesor_crear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +182,9 @@
     <Compile Include="Catalogos\Ciclos_form.Designer.cs">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogos\Pensum_form.resx">
+      <DependentUpon>Pensum_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Carrera_crear.resx">
       <DependentUpon>Carrera_crear.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Municipio_lista.resx">
       <DependentUpon>Municipio_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Pensum_lista.resx">
+      <DependentUpon>Pensum_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Profesor_crear.resx">
       <DependentUpon>Profesor_crear.cs</DependentUpon>
