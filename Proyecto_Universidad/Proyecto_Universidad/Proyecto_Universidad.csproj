@@ -54,6 +54,12 @@
       <DependentUpon>Carrera_crear.cs</DependentUpon>
       <Link>Catalogos\Carrera_crear.Designer.cs</Link>
     </Compile>
+    <Compile Include="Catalogos\Catedra_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Catedra_lista.Designer.cs">
+      <DependentUpon>Catedra_lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Establecimientos_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <EmbeddedResource Include="..\..\..\..\..\Desktop\proyecto final\Carrera_crear.resx">
       <DependentUpon>Carrera_crear.cs</DependentUpon>
       <Link>Catalogos\Carrera_crear.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Catedra_lista.resx">
+      <DependentUpon>Catedra_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
       <DependentUpon>Establecimientos_form.cs</DependentUpon>
