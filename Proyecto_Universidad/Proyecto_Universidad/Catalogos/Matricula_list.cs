@@ -7,9 +7,10 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class Matricula_list : Form
     {
-        public Matricula_list()
+        public Matricula_list(Matricula_form parametro)
         {
             InitializeComponent();
+
         }
         private void Matricula_lista_Load(object sender, EventArgs e)
         {
@@ -68,15 +69,15 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-            // MessageBox.Show(grid_datos.CurrentRow.Cells[1].Value.ToString());
+            
             Matricula_form ventana = new Matricula_form(Convert.ToInt32(
-            grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[5].Value.ToString(), grid_datos.CurrentRow.Cells[1].Value.ToString(), 
+            grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(),
             grid_datos.CurrentRow.Cells[2].Value.ToString(), grid_datos.CurrentRow.Cells[3].Value.ToString(), grid_datos.CurrentRow.Cells[4].Value.ToString());
-            ventana.ShowDialog();
-            ventana.Dispose();
-            MessageBox.Show("El registro se ha actualizado con exito");
+            ventana.ShowDialog();         
+            ventana.Dispose(); 
             Matricula_lista_Load(null, null);
         }
+
     }
 }
 

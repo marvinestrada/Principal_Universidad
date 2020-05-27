@@ -32,16 +32,17 @@
             this.btnActualizarTip = new System.Windows.Forms.Button();
             this.btnRefrescarTip = new System.Windows.Forms.Button();
             this.btnCrearTip = new System.Windows.Forms.Button();
-            this.data_LisTip = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.data_LisTip)).BeginInit();
+            this.grid_datos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminarTip
             // 
             this.btnEliminarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnEliminarTip.Location = new System.Drawing.Point(451, 309);
+            this.btnEliminarTip.Location = new System.Drawing.Point(601, 380);
+            this.btnEliminarTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarTip.Name = "btnEliminarTip";
-            this.btnEliminarTip.Size = new System.Drawing.Size(121, 41);
+            this.btnEliminarTip.Size = new System.Drawing.Size(161, 50);
             this.btnEliminarTip.TabIndex = 19;
             this.btnEliminarTip.Text = "ELIMINAR";
             this.btnEliminarTip.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // btnActualizarTip
             // 
             this.btnActualizarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnActualizarTip.Location = new System.Drawing.Point(305, 309);
+            this.btnActualizarTip.Location = new System.Drawing.Point(407, 380);
+            this.btnActualizarTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizarTip.Name = "btnActualizarTip";
-            this.btnActualizarTip.Size = new System.Drawing.Size(121, 41);
+            this.btnActualizarTip.Size = new System.Drawing.Size(161, 50);
             this.btnActualizarTip.TabIndex = 18;
             this.btnActualizarTip.Text = "ACTUALIZAR";
             this.btnActualizarTip.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // btnRefrescarTip
             // 
             this.btnRefrescarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefrescarTip.Location = new System.Drawing.Point(161, 309);
+            this.btnRefrescarTip.Location = new System.Drawing.Point(215, 380);
+            this.btnRefrescarTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefrescarTip.Name = "btnRefrescarTip";
-            this.btnRefrescarTip.Size = new System.Drawing.Size(121, 41);
+            this.btnRefrescarTip.Size = new System.Drawing.Size(161, 50);
             this.btnRefrescarTip.TabIndex = 17;
             this.btnRefrescarTip.Text = "REFRESH";
             this.btnRefrescarTip.UseVisualStyleBackColor = true;
@@ -69,36 +72,41 @@
             // btnCrearTip
             // 
             this.btnCrearTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnCrearTip.Location = new System.Drawing.Point(14, 309);
+            this.btnCrearTip.Location = new System.Drawing.Point(19, 380);
+            this.btnCrearTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCrearTip.Name = "btnCrearTip";
-            this.btnCrearTip.Size = new System.Drawing.Size(121, 41);
+            this.btnCrearTip.Size = new System.Drawing.Size(161, 50);
             this.btnCrearTip.TabIndex = 16;
             this.btnCrearTip.Text = "CREAR";
             this.btnCrearTip.UseVisualStyleBackColor = true;
             // 
-            // data_LisTip
+            // grid_datos
             // 
-            this.data_LisTip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_LisTip.Location = new System.Drawing.Point(13, 12);
-            this.data_LisTip.Name = "data_LisTip";
-            this.data_LisTip.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_LisTip.Size = new System.Drawing.Size(558, 289);
-            this.data_LisTip.TabIndex = 15;
+            this.grid_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_datos.Location = new System.Drawing.Point(17, 15);
+            this.grid_datos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grid_datos.Name = "grid_datos";
+            this.grid_datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grid_datos.Size = new System.Drawing.Size(744, 356);
+            this.grid_datos.TabIndex = 15;
+            this.grid_datos.DoubleClick += new System.EventHandler(this.grid_datos_DoubleClick);
             // 
             // Tipo_lista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 362);
+            this.ClientSize = new System.Drawing.Size(779, 446);
             this.Controls.Add(this.btnEliminarTip);
             this.Controls.Add(this.btnActualizarTip);
             this.Controls.Add(this.btnRefrescarTip);
             this.Controls.Add(this.btnCrearTip);
-            this.Controls.Add(this.data_LisTip);
+            this.Controls.Add(this.grid_datos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tipo_lista";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.Text = "Tipo_lista";
-            ((System.ComponentModel.ISupportInitialize)(this.data_LisTip)).EndInit();
+            this.Load += new System.EventHandler(this.Tipo_lista_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,6 +117,6 @@
         private System.Windows.Forms.Button btnActualizarTip;
         private System.Windows.Forms.Button btnRefrescarTip;
         private System.Windows.Forms.Button btnCrearTip;
-        private System.Windows.Forms.DataGridView data_LisTip;
+        private System.Windows.Forms.DataGridView grid_datos;
     }
 }

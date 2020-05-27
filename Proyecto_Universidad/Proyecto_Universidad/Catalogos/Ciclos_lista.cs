@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Proyecto_Universidad.Catalogos;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Universidad
 {
     public partial class Ciclos_lista : Form
     {
-        public Ciclos_lista()
+        //variable que guardara el form
+        Matricula_form padre3;
+
+        public Ciclos_lista(Matricula_form parametro)
         {
             InitializeComponent();
+
+            //Asigno el parametro de mi variable
+            padre3 = parametro;
         }
         private void Ciclos_lista_Load(object sender, EventArgs e)
         {
@@ -74,12 +75,17 @@ namespace Proyecto_Universidad
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show(grid_datos.CurrentRow.Cells[1].Value.ToString());
             Ciclos_form ventana = new Ciclos_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
             Ciclos_lista_Load(null, null);
+        }
+
+        private void grid_datos_DoubleClick(object sender, EventArgs e)
+        {
+            padre3.txtCiclo.Text = grid_datos.CurrentRow.Cells[0].Value.ToString();
+            this.Dispose();
         }
     }
 }

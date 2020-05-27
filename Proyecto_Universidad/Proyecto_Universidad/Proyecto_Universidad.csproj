@@ -58,12 +58,6 @@
     <Compile Include="Catalogos\Carrera_lista.Designer.cs">
       <DependentUpon>Carrera_lista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\CRUD_estudiante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Catalogos\CRUD_estudiante.Designer.cs">
-      <DependentUpon>CRUD_estudiante.cs</DependentUpon>
-    </Compile>
     <Compile Include="Catalogos\CRUD_pagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,9 +169,6 @@
     <EmbeddedResource Include="Catalogos\Carrera_lista.resx">
       <DependentUpon>Carrera_lista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\CRUD_estudiante.resx">
-      <DependentUpon>CRUD_estudiante.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\CRUD_pagos.resx">
       <DependentUpon>CRUD_pagos.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Establecimiento_form.resx">
       <DependentUpon>Establecimiento_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimiento_lista.resx">
+      <DependentUpon>Establecimiento_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Estudiante_crear.resx">
       <DependentUpon>Estudiante_crear.cs</DependentUpon>

@@ -103,6 +103,7 @@
             this.grid_datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_datos.Size = new System.Drawing.Size(651, 334);
             this.grid_datos.TabIndex = 10;
+            this.grid_datos.DoubleClick += new System.EventHandler(this.grid_datos_DoubleClick);
             // 
             // Id_establecimiento
             // 
@@ -154,9 +155,9 @@
         private System.Windows.Forms.Button bot_actualizar;
         private System.Windows.Forms.Button boton_refrescar;
         private System.Windows.Forms.Button bot_crear;
-        private System.Windows.Forms.DataGridView grid_datos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_establecimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Establecimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_municipio;
+        public System.Windows.Forms.DataGridView grid_datos;
     }
 }
