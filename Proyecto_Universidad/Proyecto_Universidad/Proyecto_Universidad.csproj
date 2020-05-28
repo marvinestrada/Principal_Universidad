@@ -101,6 +101,12 @@
     <Compile Include="Catalogos\Datos_Estudiante.Designer.cs">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Catedra_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Catedra_lista.Designer.cs">
+      <DependentUpon>Catedra_lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Establecimientos_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Datos_Estudiante.resx">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Catedra_lista.resx">
+      <DependentUpon>Catedra_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
       <DependentUpon>Establecimientos_form.cs</DependentUpon>
