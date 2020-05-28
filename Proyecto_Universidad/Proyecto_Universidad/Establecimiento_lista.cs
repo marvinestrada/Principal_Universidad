@@ -1,22 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Universidad.Catalogos
+namespace Proyecto_Universidad
 {
-    public partial class Profesor_lista : Form
+    public partial class Establecimiento_lista : Form
     {
-        public Profesor_lista()
+        public Establecimiento_lista()
         {
             InitializeComponent();
         }
-
-        private void Profesor_lista_Load(object sender, EventArgs e)
+        private void Establecimiento_lista_Load(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Profesor", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_Establecimiento", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
                 DataTable DT = new DataTable();
@@ -24,7 +29,7 @@ namespace Proyecto_Universidad.Catalogos
                 SqlDataAdapter DA = new SqlDataAdapter(com);
                 DA.Fill(DT);
                 Conn.sqlconeccion.Close();
-                data_ListPro.DataSource = DT;
+                grid_datos.DataSource = DT;
             }
             catch (Exception ee)
             {
@@ -32,18 +37,18 @@ namespace Proyecto_Universidad.Catalogos
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
-        private void btnRefrescarPro_Click(object sender, EventArgs e)
+        private void bot_refrescar_Click(object sender, EventArgs e)
         {
-            Profesor_lista_Load(null, null);
+            Establecimiento_lista_Load(null, null);
         }
-        private void btnEliminarPro_Click(object sender, EventArgs e)
+        private void bot_eliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Profesor", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_Establecimiento", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_profesor", data_ListPro.CurrentRow.Cells[0].Value.ToString());
+                com.Parameters.AddWithValue("Id_establecimiento", grid_datos.CurrentRow.Cells[0].Value.ToString());
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -53,11 +58,11 @@ namespace Proyecto_Universidad.Catalogos
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
-            Profesor_lista_Load(null, null);
+            Establecimiento_lista_Load(null, null);
         }
         private void bot_crear_Click(object sender, EventArgs e)
         {
-            Profesor_crear ventana = new Profesor_crear();
+            Establecimiento_form ventana = new Establecimiento_form();
             ventana.ShowDialog();
             int cod = ventana.id;
             ventana.Dispose();
@@ -65,19 +70,17 @@ namespace Proyecto_Universidad.Catalogos
             {
                 MessageBox.Show("Se ha creado un registro con Id: " + cod);
             }
-            Profesor_lista_Load(null, null);
+            Establecimiento_lista_Load(null, null);
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(data_ListPro.CurrentRow.Cells[1].Value.ToString());
-            Profesor_crear ventana = new Profesor_crear(Convert.ToInt32(data_ListPro.CurrentRow.Cells[0].Value), data_ListPro.CurrentRow.Cells[1].Value.ToString(), data_ListPro.CurrentRow.Cells[2].Value.ToString());
+            // MessageBox.Show(grid_datos.CurrentRow.Cells[1].Value.ToString());
+            Establecimiento_form ventana = new Establecimiento_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
-            Profesor_lista_Load(null, null);
+            Establecimiento_lista_Load(null, null);
         }
-
-
     }
 }
-
+ 

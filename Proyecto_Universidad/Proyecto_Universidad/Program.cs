@@ -17,7 +17,7 @@ namespace Proyecto_Universidad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Carrera_lista ());
+            Application.Run(new Notas());
         }
     }
 }

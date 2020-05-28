@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Universidad
 {
-    partial class Municipio_crear
+    partial class Establecimiento_form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,8 @@
         {
             this.txtmunicipio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtestablecimiento = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -37,27 +39,45 @@
             // txtmunicipio
             // 
             this.txtmunicipio.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmunicipio.Location = new System.Drawing.Point(142, 36);
+            this.txtmunicipio.Location = new System.Drawing.Point(208, 55);
             this.txtmunicipio.Margin = new System.Windows.Forms.Padding(4);
             this.txtmunicipio.Name = "txtmunicipio";
-            this.txtmunicipio.Size = new System.Drawing.Size(453, 26);
-            this.txtmunicipio.TabIndex = 20;
-            this.txtmunicipio.TextChanged += new System.EventHandler(this.txtmunicipio_TextChanged);
+            this.txtmunicipio.Size = new System.Drawing.Size(387, 31);
+            this.txtmunicipio.TabIndex = 22;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 40);
+            this.label3.Location = new System.Drawing.Point(22, 59);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 28);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Municipio:";
+            this.label3.Size = new System.Drawing.Size(191, 28);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "ID Municipio:";
+            // 
+            // txtestablecimiento
+            // 
+            this.txtestablecimiento.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtestablecimiento.Location = new System.Drawing.Point(208, 16);
+            this.txtestablecimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtestablecimiento.Name = "txtestablecimiento";
+            this.txtestablecimiento.Size = new System.Drawing.Size(387, 31);
+            this.txtestablecimiento.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 28);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Establecimiento:";
             // 
             // btn_cerrar
             // 
             this.btn_cerrar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cerrar.Location = new System.Drawing.Point(435, 575);
+            this.btn_cerrar.Location = new System.Drawing.Point(435, 594);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(161, 50);
@@ -69,7 +89,7 @@
             // btn_aceptar
             // 
             this.btn_aceptar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_aceptar.Location = new System.Drawing.Point(266, 575);
+            this.btn_aceptar.Location = new System.Drawing.Point(266, 594);
             this.btn_aceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(161, 50);
@@ -78,20 +98,21 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // Municipio_crear
+            // Establecimiento_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 661);
             this.Controls.Add(this.txtmunicipio);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtestablecimiento);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_aceptar);
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Municipio_crear";
-            this.Padding = new System.Windows.Forms.Padding(11);
-            this.Text = "Municipio_crear";
-            this.Load += new System.EventHandler(this.Municipio_crear_Load);
+            this.MaximizeBox = false;
+            this.Name = "Establecimiento_form";
+            this.Text = "Establecimiento_form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,6 +122,8 @@
 
         private System.Windows.Forms.TextBox txtmunicipio;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtestablecimiento;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Button btn_aceptar;
     }

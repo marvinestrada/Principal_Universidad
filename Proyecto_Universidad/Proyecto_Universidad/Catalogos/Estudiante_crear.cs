@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Universidad
@@ -34,7 +28,7 @@ namespace Proyecto_Universidad
                 com = new SqlCommand("CRUD_Estudiante", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 3);
-                com.Parameters.AddWithValue("Id_Estudiente", Codigo);
+                com.Parameters.AddWithValue("id_Estudiente", Codigo);
                 com.Parameters.AddWithValue("Nombres", txtNomEstu.Text);
                 com.Parameters.AddWithValue("Apellidos", txtapeEstu.Text);
                 com.Parameters.AddWithValue("Dirección", txtdirEstu.Text);
@@ -49,7 +43,7 @@ namespace Proyecto_Universidad
                 SqlCommand com = new SqlCommand("CRUD_Estudiante", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 1);
-                com.Parameters.AddWithValue("Id_Estudiente", Codigo);
+                com.Parameters.AddWithValue("id_Estudiente", Codigo);
                 com.Parameters.AddWithValue("Nombres", txtNomEstu.Text);
                 com.Parameters.AddWithValue("Apellidos", txtapeEstu.Text);
                 com.Parameters.AddWithValue("Dirección", txtdirEstu.Text);
