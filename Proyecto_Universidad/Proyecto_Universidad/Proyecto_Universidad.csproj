@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.9.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Notas_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Notas_form.Designer.cs">
+      <DependentUpon>Notas_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Notas.Designer.cs">
+      <DependentUpon>Notas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Pensum_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Pensum_form.Designer.cs">
+      <DependentUpon>Pensum_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Carrera_crear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +94,24 @@
     </Compile>
     <Compile Include="Catalogos\Datos_Estudiante.Designer.cs">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Catedra_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Catedra_lista.Designer.cs">
+      <DependentUpon>Catedra_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_form.Designer.cs">
+      <DependentUpon>Establecimientos_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Establecimientos_lista.Designer.cs">
+      <DependentUpon>Establecimientos_lista.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Establecimiento_form.cs">
       <SubType>Form</SubType>
@@ -111,6 +148,18 @@
     </Compile>
     <Compile Include="Catalogos\Matricula_list.Designer.cs">
       <DependentUpon>Matricula_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Pensum_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Pensum_lista.Designer.cs">
+      <DependentUpon>Pensum_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Profesor_crear.cs">
       <SubType>Form</SubType>
@@ -163,6 +212,15 @@
     <Compile Include="Catalogos\Ciclos_form.Designer.cs">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogos\Notas_form.resx">
+      <DependentUpon>Notas_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Notas.resx">
+      <DependentUpon>Notas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Pensum_form.resx">
+      <DependentUpon>Pensum_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Carrera_crear.resx">
       <DependentUpon>Carrera_crear.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,8 +236,13 @@
     <EmbeddedResource Include="Catalogos\Datos_Estudiante.resx">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\Establecimiento_form.resx">
-      <DependentUpon>Establecimiento_form.cs</DependentUpon>
+
+    <EmbeddedResource Include="Catalogos\Catedra_lista.resx">
+      <DependentUpon>Catedra_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
+      <DependentUpon>Establecimientos_form.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Establecimiento_lista.resx">
       <DependentUpon>Establecimiento_lista.cs</DependentUpon>
@@ -207,6 +270,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Municipio_lista.resx">
       <DependentUpon>Municipio_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Pensum_lista.resx">
+      <DependentUpon>Pensum_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Profesor_crear.resx">
       <DependentUpon>Profesor_crear.cs</DependentUpon>
