@@ -17,7 +17,7 @@ namespace Proyecto_Universidad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Notas());
+            Application.Run(new Matricula_list());
         }
     }
 }

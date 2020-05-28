@@ -77,12 +77,6 @@
     <Compile Include="Catalogos\Carrera_lista.Designer.cs">
       <DependentUpon>Carrera_lista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\CRUD_estudiante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Catalogos\CRUD_estudiante.Designer.cs">
-      <DependentUpon>CRUD_estudiante.cs</DependentUpon>
-    </Compile>
     <Compile Include="Catalogos\CRUD_pagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +136,18 @@
     </Compile>
     <Compile Include="Catalogos\Estudiante_lista.Designer.cs">
       <DependentUpon>Estudiante_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Matricula_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Matricula_form.Designer.cs">
+      <DependentUpon>Matricula_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Matricula_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Matricula_list.Designer.cs">
+      <DependentUpon>Matricula_list.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Pensum_lista.cs">
       <SubType>Form</SubType>
@@ -221,9 +227,6 @@
     <EmbeddedResource Include="Catalogos\Carrera_lista.resx">
       <DependentUpon>Carrera_lista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\CRUD_estudiante.resx">
-      <DependentUpon>CRUD_estudiante.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\CRUD_pagos.resx">
       <DependentUpon>CRUD_pagos.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,14 +236,16 @@
     <EmbeddedResource Include="Catalogos\Datos_Estudiante.resx">
       <DependentUpon>Datos_Estudiante.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Catalogos\Catedra_lista.resx">
       <DependentUpon>Catedra_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
       <DependentUpon>Establecimientos_form.cs</DependentUpon>
+
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\Establecimientos_lista.resx">
-      <DependentUpon>Establecimientos_lista.cs</DependentUpon>
+    <EmbeddedResource Include="Catalogos\Establecimiento_lista.resx">
+      <DependentUpon>Establecimiento_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Estudiante_crear.resx">
       <DependentUpon>Estudiante_crear.cs</DependentUpon>
@@ -253,6 +258,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Ciclos_lista.resx">
       <DependentUpon>Ciclos_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Matricula_form.resx">
+      <DependentUpon>Matricula_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Matricula_list.resx">
+      <DependentUpon>Matricula_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Municipio_crear.resx">
       <DependentUpon>Municipio_crear.cs</DependentUpon>

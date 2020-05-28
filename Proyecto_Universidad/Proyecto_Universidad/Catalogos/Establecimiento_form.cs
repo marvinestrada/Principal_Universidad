@@ -30,6 +30,7 @@ namespace Proyecto_Universidad
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
+                MessageBox.Show("El registro se ha actualizado con exito");
             }
             else
             {

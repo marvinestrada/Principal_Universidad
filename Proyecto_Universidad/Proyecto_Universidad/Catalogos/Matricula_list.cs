@@ -5,19 +5,18 @@ using System.Windows.Forms;
 
 namespace Proyecto_Universidad.Catalogos
 {
-    public partial class Tipo_lista : Form
+    public partial class Matricula_list : Form
     {
-        Matricula_form padre2;
-        public Tipo_lista(Matricula_form parametro)
+        public Matricula_list(Matricula_form parametro)
         {
             InitializeComponent();
-            padre2 = parametro;
+
         }
-        private void Tipo_lista_Load(object sender, EventArgs e)
+        private void Matricula_lista_Load(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_tipo", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_Matricula", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
                 DataTable DT = new DataTable();
@@ -35,16 +34,16 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void bot_refrescar_Click(object sender, EventArgs e)
         {
-            Tipo_lista_Load(null, null);
+            Matricula_lista_Load(null, null);
         }
         private void bot_eliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_tipo", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_Matricula", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_tipo", grid_datos.CurrentRow.Cells[0].Value.ToString());
+                com.Parameters.AddWithValue("Id_matricula", grid_datos.CurrentRow.Cells[0].Value.ToString());
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -54,32 +53,31 @@ namespace Proyecto_Universidad.Catalogos
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
-            Tipo_lista_Load(null, null);
+            Matricula_lista_Load(null, null);
         }
-        //private void bot_crear_Click(object sender, EventArgs e)
-        //{
-        //    Tipo_crear ventana = new Tipo_crear();
-        //    ventana.ShowDialog();
-        //    int cod = ventana.id;
-        //    ventana.Dispose();
-        //    if (cod != 0)
-        //    {
-        //        MessageBox.Show("Se ha creado un registro con Id: " + cod);
-        //    }
-        //    Tipo_lista_Load(null, null);
-        //}
+        private void bot_crear_Click(object sender, EventArgs e)
+        {
+            Matricula_form ventana = new Matricula_form();
+            ventana.ShowDialog();
+            int cod = ventana.id;
+            ventana.Dispose();
+            if (cod != 0)
+            {
+                MessageBox.Show("Se ha creado un registro con Id: " + cod);
+            }
+            Matricula_lista_Load(null, null);
+        }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-
             
-            Tipo_lista_Load(null, null);
+            Matricula_form ventana = new Matricula_form(Convert.ToInt32(
+            grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(),
+            grid_datos.CurrentRow.Cells[2].Value.ToString(), grid_datos.CurrentRow.Cells[3].Value.ToString(), grid_datos.CurrentRow.Cells[4].Value.ToString());
+            ventana.ShowDialog();         
+            ventana.Dispose(); 
+            Matricula_lista_Load(null, null);
         }
 
-        /*Evento doble click, manda los datos que se encuentran a la fila seleccionada a el formulario padre Matricula_form*/
-        private void grid_datos_DoubleClick(object sender, EventArgs e)
-        {
-            padre2.txtTipo.Text = grid_datos.CurrentRow.Cells[0].Value.ToString();
-            this.Dispose();
-        }
     }
 }
+

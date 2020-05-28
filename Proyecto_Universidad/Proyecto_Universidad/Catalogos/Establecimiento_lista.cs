@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Proyecto_Universidad.Catalogos;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Universidad
 {
     public partial class Establecimiento_lista : Form
     {
-        public Establecimiento_lista()
+        //Variable que guardara el form
+        public Matricula_form padre1;
+        public Establecimiento_lista(Matricula_form parametro)
         {
             InitializeComponent();
+
+            //Asigno el parametro de mi variable
+            padre1 = parametro;
         }
         private void Establecimiento_lista_Load(object sender, EventArgs e)
         {
@@ -74,12 +74,17 @@ namespace Proyecto_Universidad
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-            // MessageBox.Show(grid_datos.CurrentRow.Cells[1].Value.ToString());
             Establecimiento_form ventana = new Establecimiento_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
-            MessageBox.Show("El registro se ha actualizado con exito");
             Establecimiento_lista_Load(null, null);
+        }
+
+        /*Evento doble click, manda los datos que se encuentran a la fila seleccionada a el textbox del formulario padre Matricula_form*/
+        private void grid_datos_DoubleClick(object sender, EventArgs e)
+        {
+            padre1.txtestab.Text = grid_datos.CurrentRow.Cells[0].Value.ToString();
+            this.Dispose();
         }
     }
 }
