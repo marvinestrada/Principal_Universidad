@@ -63,43 +63,87 @@ namespace Proyecto_Universidad.Catalogos
         }
 
         #region Busqueda
-        /*Evento para que cuando se presione doble click sobre una celda del data grid, los datos se copien al textbox estudiante
-         * del formulario matricula_form*/
+
+        #region Buscar estudiante
+        /*Evento para abrir lista de estudiantes*/
         private void buscar_estud_Click(object sender, EventArgs e)
         {
             //Se hace la llamado al formulario Estudiante_lista para buscar datos
 
-            Estudiante_lista estudiante = new Estudiante_lista(this);
-            estudiante.ShowDialog();
-            estudiante.Dispose();
+            Estudiante_lista estudiante = new Estudiante_lista();
+            /*Llamo al delegado que se encarga de ejecutar la accion*/
+            estudiante.pasado += new Estudiante_lista.pasar(ejecutar);
+            estudiante.ShowDialog();       
         }
 
-        /*Evento para que cuando se presione doble click sobre una celda del data grid, los datos se copien al textbox establecimiento
-         * del formulario matricula_form*/
-        private void buscar_estab_Click(object sender, EventArgs e)
+        //Metodo con parametro de tipo string
+        public void ejecutar (string datos)
         {
-            Establecimiento_lista establecimiento = new Establecimiento_lista(this);
-            establecimiento.ShowDialog();
-            establecimiento.Dispose();
-        }
-
-        /*Evento para que cuando se presione doble click sobre una celda del data grid, los datos se copien al textbox Tipo
-        * del formulario matricula_form*/
-        private void buscar_tipo_Click(object sender, EventArgs e)
-        {
-            Tipo_lista tipo = new Tipo_lista(this);
-            tipo.ShowDialog();
-            tipo.Dispose();
-        }
-
-        private void buscar_ciclo_Click(object sender, EventArgs e)
-        {
-            Ciclos_lista ciclo = new Ciclos_lista(this);
-            ciclo.ShowDialog();
-            ciclo.Dispose();
+            //Indica que los datos que se encuntren en el parametro (El evento en el otro formulario) se igual al textbox
+            txtestud.Text = datos;
+            
         }
         #endregion
 
+        #region Buscar establecimiento
+        /*Evento para abrir lista de establecimiento*/
+        private void buscar_estab_Click(object sender, EventArgs e)
+        {
+            //Se hace la llamado al formulario Estudiante_lista para buscar datos
 
+            Establecimiento_lista establecimiento = new Establecimiento_lista();
+            /*Llamo al delegado que se encarga de ejecutar la accion*/
+            establecimiento.pasado_ += new Establecimiento_lista.pasar_(ejecutar_);
+            establecimiento.ShowDialog();
+
+        }
+        public void ejecutar_(string datos_)
+        {
+            //Indica que los datos que se encuntren en el parametro (El evento en el otro formulario) se igual al textbox
+            txtestab.Text = datos_;
+
+        }
+
+
+        #endregion
+
+        #region Buscar tipo
+        /*Evento para abrir lista de tipos de estudiantes*/
+        private void buscar_tipo_Click(object sender, EventArgs e)
+        {
+            Tipo_lista tipo = new Tipo_lista();
+            tipo.pasado += new Tipo_lista.pasar(Ejecutar);
+            tipo.ShowDialog();
+            
+        }
+
+        public void Ejecutar(string datos)
+        {
+            //Indica que los datos que se encuntren en el parametro (El evento en el otro formulario) se igual al textbox
+            txtTipo.Text = datos;
+
+        }
+
+        #endregion
+
+        #region Buscar ciclo
+        /*Evento para abrir lista de ciclos*/
+        private void buscar_ciclo_Click(object sender, EventArgs e)
+        {
+            Ciclos_lista ciclo = new Ciclos_lista();
+            ciclo.pasado += new Ciclos_lista.pasar(execute);
+            ciclo.ShowDialog();
+        }
+
+        public void execute(string datos)
+        {
+            //Indica que los datos que se encuntren en el parametro (El evento en el otro formulario) se igual al textbox
+            txtCiclo.Text = datos;
+
+        }
+
+        #endregion
+
+        #endregion
     }
 }

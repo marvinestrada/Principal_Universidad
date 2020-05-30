@@ -40,51 +40,55 @@
             // 
             this.btnEliminarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnEliminarTip.Location = new System.Drawing.Point(601, 380);
-            this.btnEliminarTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarTip.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarTip.Name = "btnEliminarTip";
             this.btnEliminarTip.Size = new System.Drawing.Size(161, 50);
             this.btnEliminarTip.TabIndex = 19;
             this.btnEliminarTip.Text = "ELIMINAR";
             this.btnEliminarTip.UseVisualStyleBackColor = true;
+            this.btnEliminarTip.Click += new System.EventHandler(this.bot_eliminar_Click);
             // 
             // btnActualizarTip
             // 
             this.btnActualizarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnActualizarTip.Location = new System.Drawing.Point(407, 380);
-            this.btnActualizarTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizarTip.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizarTip.Name = "btnActualizarTip";
             this.btnActualizarTip.Size = new System.Drawing.Size(161, 50);
             this.btnActualizarTip.TabIndex = 18;
             this.btnActualizarTip.Text = "ACTUALIZAR";
             this.btnActualizarTip.UseVisualStyleBackColor = true;
+            this.btnActualizarTip.Click += new System.EventHandler(this.bot_actualizar_Click);
             // 
             // btnRefrescarTip
             // 
             this.btnRefrescarTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnRefrescarTip.Location = new System.Drawing.Point(215, 380);
-            this.btnRefrescarTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefrescarTip.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefrescarTip.Name = "btnRefrescarTip";
             this.btnRefrescarTip.Size = new System.Drawing.Size(161, 50);
             this.btnRefrescarTip.TabIndex = 17;
             this.btnRefrescarTip.Text = "REFRESH";
             this.btnRefrescarTip.UseVisualStyleBackColor = true;
+            this.btnRefrescarTip.Click += new System.EventHandler(this.bot_refrescar_Click);
             // 
             // btnCrearTip
             // 
             this.btnCrearTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnCrearTip.Location = new System.Drawing.Point(19, 380);
-            this.btnCrearTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCrearTip.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrearTip.Name = "btnCrearTip";
             this.btnCrearTip.Size = new System.Drawing.Size(161, 50);
             this.btnCrearTip.TabIndex = 16;
             this.btnCrearTip.Text = "CREAR";
             this.btnCrearTip.UseVisualStyleBackColor = true;
+            this.btnCrearTip.Click += new System.EventHandler(this.bot_crear_Click);
             // 
             // grid_datos
             // 
             this.grid_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_datos.Location = new System.Drawing.Point(17, 15);
-            this.grid_datos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grid_datos.Margin = new System.Windows.Forms.Padding(4);
             this.grid_datos.Name = "grid_datos";
             this.grid_datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_datos.Size = new System.Drawing.Size(744, 356);
@@ -101,7 +105,7 @@
             this.Controls.Add(this.btnRefrescarTip);
             this.Controls.Add(this.btnCrearTip);
             this.Controls.Add(this.grid_datos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tipo_lista";
             this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.Text = "Tipo_lista";

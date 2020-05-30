@@ -8,18 +8,21 @@ namespace Proyecto_Universidad
 {
     public partial class Estudiante_lista : Form
     {
-        public  Matricula_form padre;
-        public Estudiante_lista(Matricula_form parametro)
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario matricula con un parametro
+        public delegate void pasar (string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
+       
+        public Estudiante_lista()
         {
             InitializeComponent();
-            padre = parametro;
         }
 
         public void Estudiante_lista_Load(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Estudiante", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_estudiante", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
                 DataTable DT = new DataTable();
@@ -43,10 +46,10 @@ namespace Proyecto_Universidad
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Estudiante", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_estudiante", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_Estudiante", data_ListEstu.CurrentRow.Cells[0].Value.ToString());
+                com.Parameters.AddWithValue("Id_estudiante", data_ListEstu.CurrentRow.Cells[0].Value.ToString());
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -60,7 +63,7 @@ namespace Proyecto_Universidad
         }
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            Datos_Estudiante ventana = new Datos_Estudiante();
+            Estudiante_crear ventana = new Estudiante_crear();
             ventana.ShowDialog();
             int cod = ventana.id;
             ventana.Dispose();
@@ -73,7 +76,7 @@ namespace Proyecto_Universidad
         public void bot_actualizar_Click(object sender, EventArgs e)
         {
             MessageBox.Show(data_ListEstu.CurrentRow.Cells[1].Value.ToString());
-            Datos_Estudiante ventana = new Datos_Estudiante(Convert.ToInt32(data_ListEstu.CurrentRow.Cells[0].Value), data_ListEstu.CurrentRow.Cells[1].Value.ToString(), data_ListEstu.CurrentRow.Cells[2].Value.ToString());
+            Estudiante_crear ventana = new Estudiante_crear(Convert.ToInt32(data_ListEstu.CurrentRow.Cells[0].Value), data_ListEstu.CurrentRow.Cells[1].Value.ToString(), data_ListEstu.CurrentRow.Cells[2].Value.ToString(), data_ListEstu.CurrentRow.Cells[3].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
@@ -82,10 +85,10 @@ namespace Proyecto_Universidad
 
         }
 
-        /*Evento doble click, manda los datos que se encuentran a la fila seleccionada a el textbox del formulario padre Matricula_form*/
+        //Evento doble click para que los datos que se encuentra en la fila del datagrid se envien al formulario matricula
         public void data_ListEstu_DoubleClick(object sender, EventArgs e)
         {
-            padre.txtestud.Text = data_ListEstu.CurrentRow.Cells[0].Value.ToString();
+            pasado(data_ListEstu.CurrentRow.Cells[0].Value.ToString());
             this.Dispose();
         }
     }

@@ -8,15 +8,16 @@ namespace Proyecto_Universidad
 {
     public partial class Establecimiento_lista : Form
     {
-        //Variable que guardara el form
-        public Matricula_form padre1;
-        public Establecimiento_lista(Matricula_form parametro)
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario matricula con un parametro
+        public delegate void pasar_(string datos_);
+        //Evento que lo va ejecutar
+        public event pasar_ pasado_;
+
+        public Establecimiento_lista()
         {
             InitializeComponent();
-
-            //Asigno el parametro de mi variable
-            padre1 = parametro;
         }
+        
         private void Establecimiento_lista_Load(object sender, EventArgs e)
         {
             try
@@ -80,10 +81,10 @@ namespace Proyecto_Universidad
             Establecimiento_lista_Load(null, null);
         }
 
-        /*Evento doble click, manda los datos que se encuentran a la fila seleccionada a el textbox del formulario padre Matricula_form*/
+        //Evento doble click para que los datos que se encuentra en la fila del datagrid se envien al formulario matricula
         private void grid_datos_DoubleClick(object sender, EventArgs e)
         {
-            padre1.txtestab.Text = grid_datos.CurrentRow.Cells[0].Value.ToString();
+            pasado_(grid_datos.CurrentRow.Cells[0].Value.ToString());
             this.Dispose();
         }
     }

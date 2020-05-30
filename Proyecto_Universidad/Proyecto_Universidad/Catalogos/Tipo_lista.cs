@@ -7,12 +7,16 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class Tipo_lista : Form
     {
-        Matricula_form padre2;
-        public Tipo_lista(Matricula_form parametro)
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario matricula con un parametro
+        public delegate void pasar(string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
+
+        public Tipo_lista()
         {
             InitializeComponent();
-            padre2 = parametro;
         }
+           
         private void Tipo_lista_Load(object sender, EventArgs e)
         {
             try
@@ -56,30 +60,40 @@ namespace Proyecto_Universidad.Catalogos
             }
             Tipo_lista_Load(null, null);
         }
-        //private void bot_crear_Click(object sender, EventArgs e)
-        //{
-        //    Tipo_crear ventana = new Tipo_crear();
-        //    ventana.ShowDialog();
-        //    int cod = ventana.id;
-        //    ventana.Dispose();
-        //    if (cod != 0)
-        //    {
-        //        MessageBox.Show("Se ha creado un registro con Id: " + cod);
-        //    }
-        //    Tipo_lista_Load(null, null);
-        //}
-        private void bot_actualizar_Click(object sender, EventArgs e)
-        {
 
-            
+        private void bot_crear_Click(object sender, EventArgs e)
+        {
+            Tipo_crear ventana = new Tipo_crear();
+            ventana.ShowDialog();
+            int cod = ventana.id;
+            ventana.Dispose();
+            if (cod != 0)
+            {
+                MessageBox.Show("Se ha creado un registro con Id: " + cod);
+            }
             Tipo_lista_Load(null, null);
         }
 
-        /*Evento doble click, manda los datos que se encuentran a la fila seleccionada a el formulario padre Matricula_form*/
+        private void bot_actualizar_Click(object sender, EventArgs e)
+        {
+            Tipo_crear ventana = new Tipo_crear(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString());
+            ventana.ShowDialog();
+            ventana.Dispose();
+            MessageBox.Show("El registro se ha actualizado con exito");
+            Tipo_lista_Load(null, null);
+        }
+
         private void grid_datos_DoubleClick(object sender, EventArgs e)
         {
-            padre2.txtTipo.Text = grid_datos.CurrentRow.Cells[0].Value.ToString();
-            this.Dispose();
+            try
+            {
+                pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
+                this.Dispose();
         }
+            catch (Exception ee)
+            {
+
+            }
+}
     }
 }

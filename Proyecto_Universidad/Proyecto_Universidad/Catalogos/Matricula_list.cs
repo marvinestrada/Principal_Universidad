@@ -7,7 +7,7 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class Matricula_list : Form
     {
-        public Matricula_list(Matricula_form parametro)
+        public Matricula_list()
         {
             InitializeComponent();
 

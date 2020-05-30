@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Universidad
 {
-    partial class Datos_Estudiante
+    partial class Estudiante_crear
     {
         /// <summary>
         /// Required designer variable.
@@ -32,10 +32,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txttelEstu = new System.Windows.Forms.TextBox();
-            this.txtdirEstu = new System.Windows.Forms.TextBox();
-            this.txtapeEstu = new System.Windows.Forms.TextBox();
-            this.txtNomEstu = new System.Windows.Forms.TextBox();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtdir = new System.Windows.Forms.TextBox();
+            this.txtapellido = new System.Windows.Forms.TextBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,9 +44,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 28);
+            this.label1.Location = new System.Drawing.Point(32, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombres:";
             // 
@@ -54,9 +55,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 198);
+            this.label4.Location = new System.Drawing.Point(32, 244);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.Size = new System.Drawing.Size(95, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Teléfono:";
             // 
@@ -64,9 +66,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 139);
+            this.label3.Location = new System.Drawing.Point(32, 171);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(98, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Dirección.";
             // 
@@ -74,50 +77,56 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 80);
+            this.label2.Location = new System.Drawing.Point(32, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Apellidos:";
             // 
-            // txttelEstu
+            // txtTel
             // 
-            this.txttelEstu.Location = new System.Drawing.Point(135, 203);
-            this.txttelEstu.Multiline = true;
-            this.txttelEstu.Name = "txttelEstu";
-            this.txttelEstu.Size = new System.Drawing.Size(155, 35);
-            this.txttelEstu.TabIndex = 13;
+            this.txtTel.Location = new System.Drawing.Point(180, 244);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTel.Multiline = true;
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(402, 42);
+            this.txtTel.TabIndex = 13;
             // 
-            // txtdirEstu
+            // txtdir
             // 
-            this.txtdirEstu.Location = new System.Drawing.Point(135, 144);
-            this.txtdirEstu.Multiline = true;
-            this.txtdirEstu.Name = "txtdirEstu";
-            this.txtdirEstu.Size = new System.Drawing.Size(209, 32);
-            this.txtdirEstu.TabIndex = 12;
+            this.txtdir.Location = new System.Drawing.Point(180, 177);
+            this.txtdir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdir.Multiline = true;
+            this.txtdir.Name = "txtdir";
+            this.txtdir.Size = new System.Drawing.Size(402, 38);
+            this.txtdir.TabIndex = 12;
             // 
-            // txtapeEstu
+            // txtapellido
             // 
-            this.txtapeEstu.Location = new System.Drawing.Point(135, 85);
-            this.txtapeEstu.Multiline = true;
-            this.txtapeEstu.Name = "txtapeEstu";
-            this.txtapeEstu.Size = new System.Drawing.Size(209, 32);
-            this.txtapeEstu.TabIndex = 11;
+            this.txtapellido.Location = new System.Drawing.Point(180, 105);
+            this.txtapellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtapellido.Multiline = true;
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.Size = new System.Drawing.Size(402, 38);
+            this.txtapellido.TabIndex = 11;
             // 
-            // txtNomEstu
+            // txtNom
             // 
-            this.txtNomEstu.Location = new System.Drawing.Point(135, 28);
-            this.txtNomEstu.Multiline = true;
-            this.txtNomEstu.Name = "txtNomEstu";
-            this.txtNomEstu.Size = new System.Drawing.Size(209, 32);
-            this.txtNomEstu.TabIndex = 10;
+            this.txtNom.Location = new System.Drawing.Point(180, 34);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNom.Multiline = true;
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(402, 38);
+            this.txtNom.TabIndex = 10;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(316, 472);
+            this.btnCancelar.Location = new System.Drawing.Point(421, 581);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(121, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(161, 50);
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -125,32 +134,34 @@
             // btnAceptar
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(168, 472);
+            this.btnAceptar.Location = new System.Drawing.Point(224, 581);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(121, 41);
+            this.btnAceptar.Size = new System.Drawing.Size(161, 50);
             this.btnAceptar.TabIndex = 14;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // Datos_Estudiante
+            // Estudiante_crear
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 537);
+            this.ClientSize = new System.Drawing.Size(619, 661);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txttelEstu);
-            this.Controls.Add(this.txtdirEstu);
-            this.Controls.Add(this.txtapeEstu);
-            this.Controls.Add(this.txtNomEstu);
+            this.Controls.Add(this.txtTel);
+            this.Controls.Add(this.txtdir);
+            this.Controls.Add(this.txtapellido);
+            this.Controls.Add(this.txtNom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.Name = "Datos_Estudiante";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Name = "Estudiante_crear";
+            this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.Text = "Datos_Estudiante";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,10 +174,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txttelEstu;
-        private System.Windows.Forms.TextBox txtdirEstu;
-        private System.Windows.Forms.TextBox txtapeEstu;
-        private System.Windows.Forms.TextBox txtNomEstu;
+        private System.Windows.Forms.TextBox txtTel;
+        private System.Windows.Forms.TextBox txtdir;
+        private System.Windows.Forms.TextBox txtapellido;
+        private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
     }

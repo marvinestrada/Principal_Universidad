@@ -46,6 +46,7 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.bot_eliminar_Click);
             // 
             // btnActualizar
             // 
@@ -57,6 +58,7 @@
             this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.bot_actualizar_Click);
             // 
             // btnRefrescar
             // 
@@ -68,6 +70,7 @@
             this.btnRefrescar.TabIndex = 8;
             this.btnRefrescar.Text = "REFRESH";
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.bot_refrescar_Click);
             // 
             // btnCrear
             // 

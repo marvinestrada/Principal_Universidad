@@ -8,16 +8,16 @@ namespace Proyecto_Universidad
 {
     public partial class Ciclos_lista : Form
     {
-        //variable que guardara el form
-        Matricula_form padre3;
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario matricula con un parametro
+        public delegate void pasar(string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
 
-        public Ciclos_lista(Matricula_form parametro)
+        public Ciclos_lista()
         {
             InitializeComponent();
-
-            //Asigno el parametro de mi variable
-            padre3 = parametro;
         }
+        
         private void Ciclos_lista_Load(object sender, EventArgs e)
         {
             try
@@ -84,7 +84,7 @@ namespace Proyecto_Universidad
 
         private void grid_datos_DoubleClick(object sender, EventArgs e)
         {
-            padre3.txtCiclo.Text = grid_datos.CurrentRow.Cells[0].Value.ToString();
+            pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
             this.Dispose();
         }
     }
