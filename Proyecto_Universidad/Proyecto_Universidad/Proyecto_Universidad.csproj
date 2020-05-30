@@ -215,18 +215,6 @@
     <Compile Include="Catalogos\Municipio_lista.Designer.cs">
       <DependentUpon>Municipio_lista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Establecimiento_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Establecimiento_form.Designer.cs">
-      <DependentUpon>Establecimiento_form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Establecimiento_lista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Establecimiento_lista.Designer.cs">
-      <DependentUpon>Establecimiento_lista.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Catalogos\Ciclos_form.cs">
@@ -315,12 +303,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Tipo_lista.resx">
       <DependentUpon>Tipo_lista.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Establecimiento_form.resx">
-      <DependentUpon>Establecimiento_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Establecimiento_lista.resx">
-      <DependentUpon>Establecimiento_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
