@@ -103,6 +103,7 @@
             this.grid_datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_datos.Size = new System.Drawing.Size(651, 334);
             this.grid_datos.TabIndex = 5;
+            this.grid_datos.DoubleClick += new System.EventHandler(this.grid_datos_DoubleClick);
             // 
             // Id_ciclo
             // 
