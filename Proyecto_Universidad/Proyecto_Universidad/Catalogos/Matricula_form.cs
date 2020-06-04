@@ -7,6 +7,7 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class Matricula_form : Form
     {
+
         public int id = 0;
         int Codigo = 0;
         public Matricula_form(int codigo = 0, string estudiante = "", string establecimiento = "", string tipo = "", string ciclo = "")
@@ -17,8 +18,9 @@ namespace Proyecto_Universidad.Catalogos
             txtestab.Text = establecimiento;
             txtTipo.Text = tipo;
             txtCiclo.Text = ciclo;
-            
         }
+
+
         private void btn_aceptar_Click(object sender, System.EventArgs e)
         {
             if (Codigo != 0)
@@ -84,6 +86,7 @@ namespace Proyecto_Universidad.Catalogos
             
         }
         #endregion
+
 
         #region Buscar establecimiento
         /*Evento para abrir lista de establecimiento*/

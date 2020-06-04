@@ -7,10 +7,11 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class Matricula_list : Form
     {
+
+
         public Matricula_list()
         {
-            InitializeComponent();
-
+            InitializeComponent();          
         }
         private void Matricula_lista_Load(object sender, EventArgs e)
         {
@@ -26,11 +27,12 @@ namespace Proyecto_Universidad.Catalogos
                 Conn.sqlconeccion.Close();
                 grid_datos.DataSource = DT;
             }
-            catch (Exception ee)
+            catch (Exception)
             {
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
+
         }
         private void bot_refrescar_Click(object sender, EventArgs e)
         {
@@ -48,7 +50,7 @@ namespace Proyecto_Universidad.Catalogos
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");

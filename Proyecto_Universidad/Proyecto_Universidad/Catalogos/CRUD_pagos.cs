@@ -11,6 +11,7 @@ namespace Proyecto_Universidad.Catalogos
         public CRUD_pagos()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
         private void CRUD_pagos_Load(object sender, EventArgs e)
         {
@@ -24,49 +25,19 @@ namespace Proyecto_Universidad.Catalogos
                 SqlDataAdapter DA = new SqlDataAdapter(com);
                 DA.Fill(DT);
                 Conn.sqlconeccion.Close();
-                datosgrid.DataSource = DT;
+                grid_datos.DataSource = DT;
             }
             catch (Exception ee)
             {
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
-
-
             }
         }
 
-        private void bot_crear_Click(object sender, EventArgs e)
-        {
-            CRUD_pagos_crear ventana = new CRUD_pagos_crear(1,"");
-            ventana.ShowDialog();
-            int cod = ventana.id;
-            ventana.Dispose();
-            if (cod != 0)
-            {
-                MessageBox.Show("Se ha creado un pago con Id: " + cod);
-            }
-            CRUD_pagos_Load(null, null);
-        }
-
-        private void boton_refrescar_Click(object sender, EventArgs e)
+        private void bot_refrescar_Click(object sender, EventArgs e)
         {
             CRUD_pagos_Load(null, null);
         }
-
-        private void bot_actualizar_Click(object sender, EventArgs e)
-        {
-            CRUD_pagos_crear ventana = new CRUD_pagos_crear(Convert.ToInt32(datosgrid.CurrentRow.Cells[1].Value), datosgrid.CurrentRow.Cells[0].Value.ToString());
-            ventana.ShowDialog();
-            ventana.Dispose();
-            MessageBox.Show("El registro se ha actualizado con exito");
-            Crear_Pagos(null, null);
-        }
-
-        private void Crear_Pagos(object p1, object p2)
-        {
-            throw new NotImplementedException();
-        }
-
         private void bot_eliminar_Click(object sender, EventArgs e)
         {
             try
@@ -74,7 +45,7 @@ namespace Proyecto_Universidad.Catalogos
                 SqlCommand com = new SqlCommand("CRUD_pagos", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_cobro",datosgrid.CurrentRow.Cells[0].Value.ToString());
+                com.Parameters.AddWithValue("Id_pago", grid_datos.CurrentRow.Cells[0].Value.ToString());
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -82,9 +53,42 @@ namespace Proyecto_Universidad.Catalogos
             catch (Exception ee)
             {
                 Conn.sqlconeccion.Close();
-                MessageBox.Show("Ha ocurrido un error");
+                MessageBox.Show("Error de conexión");
             }
             CRUD_pagos_Load(null, null);
         }
+        private void bot_crear_Click(object sender, EventArgs e)
+        {
+            CRUD_pagos_crear ventana = new CRUD_pagos_crear();
+            ventana.ShowDialog();
+            int cod = ventana.id;
+            ventana.Dispose();
+            if (cod != 0)
+            {
+                MessageBox.Show("Se ha creado un registro con Id: " + cod);
+            }
+            CRUD_pagos_Load(null, null);
+        }
+        private void bot_actualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CRUD_pagos_crear ventana = new CRUD_pagos_crear(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[3].Value.ToString());
+                ventana.ShowDialog();
+                ventana.Dispose();
+                CRUD_pagos_Load(null, null);
+            }
+            catch (Exception) { MessageBox.Show("No ha seleccionado ningun registro para actualizar"); }
+        }
+
+        //private void grid_datos_DoubleClick(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
+        //        this.Dispose();
+        //    }
+        //    catch (Exception) { }
+        //}
     }
 }

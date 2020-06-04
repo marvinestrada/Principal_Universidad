@@ -90,7 +90,7 @@ namespace Proyecto_Universidad.Catalogos
                 pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
                 this.Dispose();
         }
-            catch (Exception ee)
+            catch (Exception)
             {
 
             }

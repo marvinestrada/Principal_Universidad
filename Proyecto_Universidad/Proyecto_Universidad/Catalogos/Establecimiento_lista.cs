@@ -84,8 +84,15 @@ namespace Proyecto_Universidad
         //Evento doble click para que los datos que se encuentra en la fila del datagrid se envien al formulario matricula
         private void grid_datos_DoubleClick(object sender, EventArgs e)
         {
-            pasado_(grid_datos.CurrentRow.Cells[0].Value.ToString());
-            this.Dispose();
+            try
+            {
+                pasado_(grid_datos.CurrentRow.Cells[0].Value.ToString());
+                this.Dispose();
+            }
+            catch(Exception)
+            {
+
+            }
         }
     }
 }

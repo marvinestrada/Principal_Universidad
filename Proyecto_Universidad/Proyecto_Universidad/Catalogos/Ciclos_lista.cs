@@ -75,17 +75,25 @@ namespace Proyecto_Universidad
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-            Ciclos_form ventana = new Ciclos_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
-            ventana.ShowDialog();
-            ventana.Dispose();
-            MessageBox.Show("El registro se ha actualizado con exito");
-            Ciclos_lista_Load(null, null);
+            try
+            {
+                Ciclos_form ventana = new Ciclos_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
+                ventana.ShowDialog();
+                ventana.Dispose();
+                MessageBox.Show("El registro se ha actualizado con exito");
+                Ciclos_lista_Load(null, null);
+            }
+            catch (Exception) { }
         }
 
         private void grid_datos_DoubleClick(object sender, EventArgs e)
         {
-            pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
-            this.Dispose();
+            try
+            {
+                pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
+                this.Dispose();
+            }
+            catch (Exception) { }
         }
     }
 }
