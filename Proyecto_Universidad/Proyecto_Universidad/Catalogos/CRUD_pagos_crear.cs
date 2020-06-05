@@ -22,11 +22,12 @@ namespace Proyecto_Universidad.Catalogos
             if (Codigo != 0)
             {
                 SqlCommand com = new SqlCommand();
-                com = new SqlCommand("CRUD_Ciclo", Conn.sqlconeccion);
+                com = new SqlCommand("CRUD_pagos", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 3);
                 com.Parameters.AddWithValue("Id_pago", Codigo);
                 com.Parameters.AddWithValue("Id_cobro", txtcobro.Text);
+                com.Parameters.AddWithValue("Fecha_pago", fechaPago.Value);
                 com.Parameters.AddWithValue("Abono", txtAbono.Text);
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
@@ -35,10 +36,11 @@ namespace Proyecto_Universidad.Catalogos
             }
             else
             {
-                SqlCommand com = new SqlCommand("CRUD_Ciclo", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_pagos", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 1);
                 com.Parameters.AddWithValue("Id_cobro", txtcobro.Text);
+                com.Parameters.AddWithValue("Fecha_pago", fechaPago.Value);
                 com.Parameters.AddWithValue("Abono", txtAbono.Text);
                 Conn.sqlconeccion.Open();
                 id = Convert.ToInt32(com.ExecuteScalar());
@@ -50,5 +52,27 @@ namespace Proyecto_Universidad.Catalogos
         {
             this.Close();
         }
+
+        #region buscar cobro
+        /*Evento para abrir lista de cobros*/
+        private void buscar_cobros_Click(object sender, EventArgs e)
+        {
+
+            //Se hace la llamado al formulario CRUD_cobros para buscar datos
+
+            CRUD_Cobros_Lista cobro = new CRUD_Cobros_Lista();
+            /*Llamo al delegado que se encarga de ejecutar la accion*/
+            cobro.pasado += new CRUD_Cobros_Lista.pasar(ejecutar);
+            cobro.ShowDialog();
+        }
+
+        //Metodo con parametro de tipo string
+        public void ejecutar(string datos)
+        {
+            //Indica que los datos que se encuntren en el parametro (El evento en el otro formulario) se igual al textbox
+           txtcobro.Text = datos;
+
+        }
+#endregion
     }
 }
