@@ -85,7 +85,7 @@ namespace Proyecto_Universidad
 
         }
 
-        //Evento doble click para que los datos que se encuentra en la fila del datagrid se envien al formulario matricula
+        //Evento doble click para que los datos que se encuentra en la fila del datagrid se envien al formulario cobro
         public void data_ListEstu_DoubleClick(object sender, EventArgs e)
         {
             try

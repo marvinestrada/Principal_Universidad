@@ -33,6 +33,7 @@
             this.boton_refrescar = new System.Windows.Forms.Button();
             this.bot_crear = new System.Windows.Forms.Button();
             this.grid_datos = new System.Windows.Forms.DataGridView();
+            this.Id_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_cobro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +94,7 @@
             this.grid_datos.AllowUserToDeleteRows = false;
             this.grid_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_pago,
             this.Id_cobro,
             this.Fecha_pago,
             this.Abono});
@@ -102,6 +104,14 @@
             this.grid_datos.ReadOnly = true;
             this.grid_datos.Size = new System.Drawing.Size(654, 315);
             this.grid_datos.TabIndex = 14;
+            // 
+            // Id_pago
+            // 
+            this.Id_pago.DataPropertyName = "Id_pago";
+            this.Id_pago.HeaderText = "Cod. Pago";
+            this.Id_pago.Name = "Id_pago";
+            this.Id_pago.ReadOnly = true;
+            this.Id_pago.Width = 150;
             // 
             // Id_cobro
             // 
@@ -153,6 +163,7 @@
         private System.Windows.Forms.Button boton_refrescar;
         private System.Windows.Forms.Button bot_crear;
         private System.Windows.Forms.DataGridView grid_datos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_pago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_cobro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_pago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Abono;

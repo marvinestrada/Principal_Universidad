@@ -8,6 +8,11 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class CRUD_pagos : Form
     {
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario pagos con un parametro
+        public delegate void pasar(string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
+
         public CRUD_pagos()
         {
             InitializeComponent();
@@ -78,17 +83,17 @@ namespace Proyecto_Universidad.Catalogos
                 ventana.Dispose();
                 CRUD_pagos_Load(null, null);
             }
-            catch (Exception) { MessageBox.Show("No ha seleccionado ningun registro para actualizar"); }
+            catch (Exception) {/* MessageBox.Show("No ha seleccionado ningun registro para actualizar");*/ }
         }
 
-        //private void grid_datos_DoubleClick(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
-        //        this.Dispose();
-        //    }
-        //    catch (Exception) { }
-        //}
+        private void grid_datos_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
+                this.Dispose();
+            }
+            catch (Exception) { }
+        }
     }
 }
