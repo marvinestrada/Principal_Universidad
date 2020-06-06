@@ -5,18 +5,23 @@ using System.Windows.Forms;
 
 namespace Proyecto_Universidad.Catalogos
 {
-    public partial class Profesor_lista : Form
+    public partial class Tipo_lista : Form
     {
-        public Profesor_lista()
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario matricula con un parametro
+        public delegate void pasar(string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
+
+        public Tipo_lista()
         {
             InitializeComponent();
         }
-
-        private void Profesor_lista_Load(object sender, EventArgs e)
+           
+        private void Tipo_lista_Load(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Profesor", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_tipo", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
                 DataTable DT = new DataTable();
@@ -24,7 +29,7 @@ namespace Proyecto_Universidad.Catalogos
                 SqlDataAdapter DA = new SqlDataAdapter(com);
                 DA.Fill(DT);
                 Conn.sqlconeccion.Close();
-                data_ListPro.DataSource = DT;
+                grid_datos.DataSource = DT;
             }
             catch (Exception ee)
             {
@@ -32,32 +37,33 @@ namespace Proyecto_Universidad.Catalogos
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
-        private void btnRefrescarPro_Click(object sender, EventArgs e)
+        private void bot_refrescar_Click(object sender, EventArgs e)
         {
-            Profesor_lista_Load(null, null);
+            Tipo_lista_Load(null, null);
         }
-        private void btnEliminarPro_Click(object sender, EventArgs e)
+        private void bot_eliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Profesor", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_tipo", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_profesor", data_ListPro.CurrentRow.Cells[0].Value.ToString());
+                com.Parameters.AddWithValue("Id_tipo", grid_datos.CurrentRow.Cells[0].Value.ToString());
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
             }
-            catch (Exception ee)
+            catch (Exception ex)
             {
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
-            Profesor_lista_Load(null, null);
+            Tipo_lista_Load(null, null);
         }
+
         private void bot_crear_Click(object sender, EventArgs e)
         {
-            Profesor_crear ventana = new Profesor_crear();
+            Tipo_crear ventana = new Tipo_crear();
             ventana.ShowDialog();
             int cod = ventana.id;
             ventana.Dispose();
@@ -65,19 +71,29 @@ namespace Proyecto_Universidad.Catalogos
             {
                 MessageBox.Show("Se ha creado un registro con Id: " + cod);
             }
-            Profesor_lista_Load(null, null);
+            Tipo_lista_Load(null, null);
         }
+
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(data_ListPro.CurrentRow.Cells[1].Value.ToString());
-            Profesor_crear ventana = new Profesor_crear(Convert.ToInt32(data_ListPro.CurrentRow.Cells[0].Value), data_ListPro.CurrentRow.Cells[1].Value.ToString(), data_ListPro.CurrentRow.Cells[2].Value.ToString());
+            Tipo_crear ventana = new Tipo_crear(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
-            Profesor_lista_Load(null, null);
+            Tipo_lista_Load(null, null);
         }
 
+        private void grid_datos_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
+                this.Dispose();
+        }
+            catch (Exception)
+            {
 
+            }
+}
     }
 }
-

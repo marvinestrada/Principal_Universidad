@@ -1,22 +1,28 @@
-﻿using System;
+﻿using Proyecto_Universidad.Catalogos;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Proyecto_Universidad
 {
-    public partial class CRUD_estudiante : Form
+    public partial class Estudiante_lista : Form
     {
-        public CRUD_estudiante()
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario matricula con un parametro
+        public delegate void pasar (string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
+       
+        public Estudiante_lista()
         {
             InitializeComponent();
         }
 
-        private void CRUD_estudiante_Load(object sender, EventArgs e)
+        public void Estudiante_lista_Load(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Estudiante", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_estudiante", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
                 DataTable DT = new DataTable();
@@ -34,16 +40,16 @@ namespace Proyecto_Universidad
         }
         private void bot_refrescar_Click(object sender, EventArgs e)
         {
-            CRUD_estudiante_Load(null, null);
+            Estudiante_lista_Load(null, null);
         }
         private void bot_eliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Estudiante", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_estudiante", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_Estudiante", data_ListEstu.CurrentRow.Cells[0].Value.ToString());
+                com.Parameters.AddWithValue("Id_estudiante", data_ListEstu.CurrentRow.Cells[0].Value.ToString());
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -53,11 +59,11 @@ namespace Proyecto_Universidad
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
-            CRUD_estudiante_Load(null, null);
+            Estudiante_lista_Load(null, null);
         }
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            Datos_Estudiante ventana = new Datos_Estudiante();
+            Estudiante_crear ventana = new Estudiante_crear();
             ventana.ShowDialog();
             int cod = ventana.id;
             ventana.Dispose();
@@ -65,22 +71,32 @@ namespace Proyecto_Universidad
             {
                 MessageBox.Show("Se ha creado un registro con Id: " + cod);
             }
-            CRUD_estudiante_Load(null, null);
+            Estudiante_lista_Load(null, null);
         }
-        private void bot_actualizar_Click(object sender, EventArgs e)
+        public void bot_actualizar_Click(object sender, EventArgs e)
         {
             MessageBox.Show(data_ListEstu.CurrentRow.Cells[1].Value.ToString());
-            Datos_Estudiante ventana = new Datos_Estudiante(Convert.ToInt32(data_ListEstu.CurrentRow.Cells[0].Value), data_ListEstu.CurrentRow.Cells[1].Value.ToString(), data_ListEstu.CurrentRow.Cells[2].Value.ToString());
+            Estudiante_crear ventana = new Estudiante_crear(Convert.ToInt32(data_ListEstu.CurrentRow.Cells[0].Value), data_ListEstu.CurrentRow.Cells[1].Value.ToString(), data_ListEstu.CurrentRow.Cells[2].Value.ToString(), data_ListEstu.CurrentRow.Cells[3].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
-            CRUD_estudiante_Load(null, null);
-        
+            Estudiante_lista_Load(null, null);
+     
 
-    
+        }
 
-        
+        //Evento doble click para que los datos que se encuentra en la fila del datagrid se envien al formulario cobro
+        public void data_ListEstu_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                pasado(data_ListEstu.CurrentRow.Cells[0].Value.ToString());
+                this.Dispose();
+            }
+            catch(Exception)
+            {
 
+            }
         }
     }
 }

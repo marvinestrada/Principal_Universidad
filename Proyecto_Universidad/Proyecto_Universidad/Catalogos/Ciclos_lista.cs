@@ -1,22 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Proyecto_Universidad.Catalogos;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Universidad
 {
     public partial class Ciclos_lista : Form
     {
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario matricula con un parametro
+        public delegate void pasar(string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
+
         public Ciclos_lista()
         {
             InitializeComponent();
         }
+        
         private void Ciclos_lista_Load(object sender, EventArgs e)
         {
             try
@@ -74,12 +75,25 @@ namespace Proyecto_Universidad
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show(grid_datos.CurrentRow.Cells[1].Value.ToString());
-            Ciclos_form ventana = new Ciclos_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
-            ventana.ShowDialog();
-            ventana.Dispose();
-            MessageBox.Show("El registro se ha actualizado con exito");
-            Ciclos_lista_Load(null, null);
+            try
+            {
+                Ciclos_form ventana = new Ciclos_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
+                ventana.ShowDialog();
+                ventana.Dispose();
+                MessageBox.Show("El registro se ha actualizado con exito");
+                Ciclos_lista_Load(null, null);
+            }
+            catch (Exception) { }
+        }
+
+        private void grid_datos_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
+                this.Dispose();
+            }
+            catch (Exception) { }
         }
     }
 }

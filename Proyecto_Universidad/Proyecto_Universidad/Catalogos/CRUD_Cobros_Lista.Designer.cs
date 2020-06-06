@@ -1,6 +1,6 @@
-﻿namespace Proyecto_Universidad
+﻿namespace Proyecto_Universidad.Catalogos
 {
-    partial class Establecimiento_lista
+    partial class CRUD_Cobros_Lista
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bot_eliminar = new System.Windows.Forms.Button();
             this.bot_actualizar = new System.Windows.Forms.Button();
             this.boton_refrescar = new System.Windows.Forms.Button();
             this.bot_crear = new System.Windows.Forms.Button();
             this.grid_datos = new System.Windows.Forms.DataGridView();
-            this.Id_establecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Establecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_cobro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,9 +95,19 @@
             this.grid_datos.AllowUserToDeleteRows = false;
             this.grid_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_establecimiento,
-            this.Establecimiento,
-            this.Id_municipio});
+            this.Id_cobro,
+            this.Id_matricula,
+            this.Fecha,
+            this.Monto});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.NullValue = "-";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid_datos.DefaultCellStyle = dataGridViewCellStyle1;
             this.grid_datos.Location = new System.Drawing.Point(16, 15);
             this.grid_datos.Margin = new System.Windows.Forms.Padding(4);
             this.grid_datos.Name = "grid_datos";
@@ -105,31 +117,39 @@
             this.grid_datos.TabIndex = 10;
             this.grid_datos.DoubleClick += new System.EventHandler(this.grid_datos_DoubleClick);
             // 
-            // Id_establecimiento
+            // Id_cobro
             // 
-            this.Id_establecimiento.DataPropertyName = "Id_establecimiento";
-            this.Id_establecimiento.HeaderText = "Cod Establecimiento";
-            this.Id_establecimiento.Name = "Id_establecimiento";
-            this.Id_establecimiento.ReadOnly = true;
-            this.Id_establecimiento.Width = 200;
+            this.Id_cobro.DataPropertyName = "Id_cobro";
+            this.Id_cobro.HeaderText = "Cod. Cobro";
+            this.Id_cobro.Name = "Id_cobro";
+            this.Id_cobro.ReadOnly = true;
+            this.Id_cobro.Width = 150;
             // 
-            // Establecimiento
+            // Id_matricula
             // 
-            this.Establecimiento.DataPropertyName = "Establecimiento";
-            this.Establecimiento.HeaderText = "Establecimiento";
-            this.Establecimiento.Name = "Establecimiento";
-            this.Establecimiento.ReadOnly = true;
-            this.Establecimiento.Width = 250;
+            this.Id_matricula.DataPropertyName = "Id_matricula";
+            this.Id_matricula.HeaderText = "Cod. Matricula";
+            this.Id_matricula.Name = "Id_matricula";
+            this.Id_matricula.ReadOnly = true;
+            this.Id_matricula.Width = 150;
             // 
-            // Id_municipio
+            // Fecha
             // 
-            this.Id_municipio.DataPropertyName = "Id_municipio";
-            this.Id_municipio.HeaderText = "Cod Municipio";
-            this.Id_municipio.Name = "Id_municipio";
-            this.Id_municipio.ReadOnly = true;
-            this.Id_municipio.Width = 200;
+            this.Fecha.DataPropertyName = "Fecha_cobro";
+            this.Fecha.HeaderText = "Mes";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 200;
             // 
-            // Establecimiento_lista
+            // Monto
+            // 
+            this.Monto.DataPropertyName = "Cobro";
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
+            this.Monto.ToolTipText = "Q.";
+            // 
+            // CRUD_Cobros_Lista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,9 +161,9 @@
             this.Controls.Add(this.grid_datos);
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
-            this.Name = "Establecimiento_lista";
-            this.Text = "Establecimiento_lista";
-            this.Load += new System.EventHandler(this.Establecimiento_lista_Load);
+            this.Name = "CRUD_Cobros_Lista";
+            this.Text = "Cobros";
+            this.Load += new System.EventHandler(this.CRUD_Cobros_Lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();
             this.ResumeLayout(false);
 
@@ -155,9 +175,10 @@
         private System.Windows.Forms.Button bot_actualizar;
         private System.Windows.Forms.Button boton_refrescar;
         private System.Windows.Forms.Button bot_crear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_establecimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Establecimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_municipio;
-        public System.Windows.Forms.DataGridView grid_datos;
+        private System.Windows.Forms.DataGridView grid_datos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_cobro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_matricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
     }
 }
