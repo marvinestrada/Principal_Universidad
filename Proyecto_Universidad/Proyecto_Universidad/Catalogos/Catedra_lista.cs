@@ -13,6 +13,10 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class Catedra_lista : Form
     {
+        public delegate void pasar(string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
+
         public Catedra_lista()
         {
             InitializeComponent();
@@ -91,6 +95,11 @@ namespace Proyecto_Universidad.Catalogos
                 MessageBox.Show("Ha ocurrido un error");
             }
             button_actualizar.Enabled = false;
+        }
+
+        private void datos_catedra_DoubleClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -92,6 +92,7 @@
             this.datos_catedra.Size = new System.Drawing.Size(755, 334);
             this.datos_catedra.TabIndex = 4;
             this.datos_catedra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datos_catedra_CellContentClick);
+            this.datos_catedra.DoubleClick += new System.EventHandler(this.datos_catedra_DoubleClick);
             // 
             // id_catedra
             // 

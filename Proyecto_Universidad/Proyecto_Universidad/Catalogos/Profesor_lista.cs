@@ -7,6 +7,9 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class Profesor_lista : Form
     {
+        public delegate void pasar(string datos);
+        //Evento que lo va ejecutar
+        public event pasar pasado;
         public Profesor_lista()
         {
             InitializeComponent();
