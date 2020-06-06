@@ -108,6 +108,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tipo_lista";
             this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipo_lista";
             this.Load += new System.EventHandler(this.Tipo_lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();

@@ -162,6 +162,7 @@
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.Name = "CRUD_Cobros_Lista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cobros";
             this.Load += new System.EventHandler(this.CRUD_Cobros_Lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();

@@ -76,12 +76,6 @@
     <Compile Include="Catalogos\CRUD_Cobros_Lista.Designer.cs">
       <DependentUpon>CRUD_Cobros_Lista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\CRUD_estudiante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Catalogos\CRUD_estudiante.Designer.cs">
-      <DependentUpon>CRUD_estudiante.cs</DependentUpon>
-    </Compile>
     <Compile Include="Catalogos\CRUD_pagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,24 +87,6 @@
     </Compile>
     <Compile Include="Catalogos\CRUD_pagos_crear.Designer.cs">
       <DependentUpon>CRUD_pagos_crear.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogos\Datos_Estudiante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Catalogos\Datos_Estudiante.Designer.cs">
-      <DependentUpon>Datos_Estudiante.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogos\Establecimientos_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Catalogos\Establecimientos_form.Designer.cs">
-      <DependentUpon>Establecimientos_form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogos\Establecimientos_lista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Catalogos\Establecimientos_lista.Designer.cs">
-      <DependentUpon>Establecimientos_lista.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Establecimiento_form.cs">
       <SubType>Form</SubType>
@@ -250,23 +226,17 @@
     <EmbeddedResource Include="Catalogos\CRUD_Cobros_Lista.resx">
       <DependentUpon>CRUD_Cobros_Lista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\CRUD_estudiante.resx">
-      <DependentUpon>CRUD_estudiante.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\CRUD_pagos.resx">
       <DependentUpon>CRUD_pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\CRUD_pagos_crear.resx">
       <DependentUpon>CRUD_pagos_crear.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\Datos_Estudiante.resx">
-      <DependentUpon>Datos_Estudiante.cs</DependentUpon>
+    <EmbeddedResource Include="Catalogos\Establecimiento_form.resx">
+      <DependentUpon>Establecimiento_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\Establecimientos_form.resx">
-      <DependentUpon>Establecimientos_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Catalogos\Establecimientos_lista.resx">
-      <DependentUpon>Establecimientos_lista.cs</DependentUpon>
+    <EmbeddedResource Include="Catalogos\Establecimiento_lista.resx">
+      <DependentUpon>Establecimiento_lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Estudiante_crear.resx">
       <DependentUpon>Estudiante_crear.cs</DependentUpon>

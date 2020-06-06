@@ -113,6 +113,7 @@
             this.MaximizeBox = false;
             this.Name = "Ciclos_form";
             this.Padding = new System.Windows.Forms.Padding(11);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso y Modificación";
             this.ResumeLayout(false);
             this.PerformLayout();

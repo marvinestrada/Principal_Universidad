@@ -129,6 +129,7 @@
             this.Controls.Add(this.bot_crear);
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Municipio_lista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Municipios";
             this.Load += new System.EventHandler(this.Municipio_lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();

@@ -20,8 +20,12 @@ namespace Proyecto_Universidad
         
         private void Ciclos_lista_Load(object sender, EventArgs e)
         {
+            /*El evento load sirve para cuando se carge la ventana, arranque el siguiente bloque de codigo automaticamente*/
+
             try
             {
+                /*Se abre conexion con BD y se ejecuta proc almacenado CRUD 2 
+                * Lo que hace es leer los datos que se encuentren a la tabla*/
                 SqlCommand com = new SqlCommand("CRUD_Ciclo", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
@@ -40,16 +44,20 @@ namespace Proyecto_Universidad
         }
         private void bot_refrescar_Click(object sender, EventArgs e)
         {
+            //Acutaliza la ventana ventana por si se hizo algun cambio
+
             Ciclos_lista_Load(null, null);
         }
         private void bot_eliminar_Click(object sender, EventArgs e)
         {
+            /* Se abre conexion con la BD y se ejecuta proc almc CRUD 4 (eliminar) */
+
             try
             {
                 SqlCommand com = new SqlCommand("CRUD_Ciclo", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_ciclo", grid_datos.CurrentRow.Cells[0].Value.ToString());
+                com.Parameters.AddWithValue("Id_ciclo", grid_datos.CurrentRow.Cells[0].Value.ToString());  /*Se tiene que eliminar de la BD el id de la tabla, ya que si no se borra puede crear conflictos*/
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -63,6 +71,7 @@ namespace Proyecto_Universidad
         }
         private void bot_crear_Click(object sender, EventArgs e)
         {
+            /*El evento del boton crear, hace el llamado a nuestro form crear, donde tenemos actualizar y crar, se ejectua el codigo que tenemos en ese form*/
             Ciclos_form ventana = new Ciclos_form();
             ventana.ShowDialog();
             int cod = ventana.id;
@@ -77,10 +86,11 @@ namespace Proyecto_Universidad
         {
             try
             {
+                //Lo mismo en este evento, hace el llamado a nuestro form crear y se ejectua el codigo que tenemos ahi para actualziar los datos.
+
                 Ciclos_form ventana = new Ciclos_form(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
                 ventana.ShowDialog();
                 ventana.Dispose();
-                MessageBox.Show("El registro se ha actualizado con exito");
                 Ciclos_lista_Load(null, null);
             }
             catch (Exception) { }

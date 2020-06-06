@@ -149,6 +149,7 @@
             this.Controls.Add(this.bot_crear);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CRUD_pagos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagos";
             this.Load += new System.EventHandler(this.CRUD_pagos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();

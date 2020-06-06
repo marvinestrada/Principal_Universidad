@@ -167,6 +167,7 @@
             this.Controls.Add(this.grid_datos);
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Matricula_list";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Matricula_list";
             this.Load += new System.EventHandler(this.Matricula_lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();
