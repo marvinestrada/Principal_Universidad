@@ -130,6 +130,18 @@
     <Compile Include="Catalogos\Estudiante_lista.Designer.cs">
       <DependentUpon>Estudiante_lista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Horarios_lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Horarios_lista.Designer.cs">
+      <DependentUpon>Horarios_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Horario_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Horario_crear.Designer.cs">
+      <DependentUpon>Horario_crear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Inscripcion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +288,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Ciclos_lista.resx">
       <DependentUpon>Ciclos_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Horarios_lista.resx">
+      <DependentUpon>Horarios_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Horario_crear.resx">
+      <DependentUpon>Horario_crear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Inscripcion.resx">
       <DependentUpon>Inscripcion.cs</DependentUpon>
