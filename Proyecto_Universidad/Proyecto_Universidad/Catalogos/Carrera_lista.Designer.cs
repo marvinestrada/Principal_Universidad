@@ -84,9 +84,9 @@
             // boton_refrescar
             // 
             this.boton_refrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boton_refrescar.Location = new System.Drawing.Point(211, 384);
+            this.boton_refrescar.Location = new System.Drawing.Point(197, 384);
             this.boton_refrescar.Name = "boton_refrescar";
-            this.boton_refrescar.Size = new System.Drawing.Size(161, 50);
+            this.boton_refrescar.Size = new System.Drawing.Size(188, 50);
             this.boton_refrescar.TabIndex = 2;
             this.boton_refrescar.Text = "REFRESCAR";
             this.boton_refrescar.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.datos_carrera);
             this.Name = "Carrera_lista";
             this.Text = "Lista de Carreras";
-            this.Load += new System.EventHandler(this.Carrera_crear_Load);
+            this.Load += new System.EventHandler(this.Carrera_lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datos_carrera)).EndInit();
             this.ResumeLayout(false);
 

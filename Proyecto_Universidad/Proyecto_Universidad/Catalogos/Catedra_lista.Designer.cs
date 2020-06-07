@@ -28,83 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.button_crear = new System.Windows.Forms.Button();
+            this.button_refrescar = new System.Windows.Forms.Button();
+            this.button_actualizar = new System.Windows.Forms.Button();
+            this.button_eliminar = new System.Windows.Forms.Button();
+            this.datos_catedra = new System.Windows.Forms.DataGridView();
+            this.id_catedra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Catedra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.datos_catedra)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // button_crear
             // 
-            this.button1.Location = new System.Drawing.Point(12, 384);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_crear.Location = new System.Drawing.Point(12, 384);
+            this.button_crear.Name = "button_crear";
+            this.button_crear.Size = new System.Drawing.Size(161, 50);
+            this.button_crear.TabIndex = 0;
+            this.button_crear.Text = "Crear";
+            this.button_crear.UseVisualStyleBackColor = true;
+            this.button_crear.Click += new System.EventHandler(this.button_crear_Click);
             // 
-            // button2
+            // button_refrescar
             // 
-            this.button2.Location = new System.Drawing.Point(215, 384);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_refrescar.Location = new System.Drawing.Point(215, 384);
+            this.button_refrescar.Name = "button_refrescar";
+            this.button_refrescar.Size = new System.Drawing.Size(161, 50);
+            this.button_refrescar.TabIndex = 1;
+            this.button_refrescar.Text = "Refrescar";
+            this.button_refrescar.UseVisualStyleBackColor = true;
+            this.button_refrescar.Click += new System.EventHandler(this.button_refrescar_Click);
             // 
-            // button3
+            // button_actualizar
             // 
-            this.button3.Location = new System.Drawing.Point(411, 384);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_actualizar.Location = new System.Drawing.Point(411, 384);
+            this.button_actualizar.Name = "button_actualizar";
+            this.button_actualizar.Size = new System.Drawing.Size(161, 50);
+            this.button_actualizar.TabIndex = 2;
+            this.button_actualizar.Text = "Actualizar";
+            this.button_actualizar.UseVisualStyleBackColor = true;
+            this.button_actualizar.Click += new System.EventHandler(this.button_actualizar_Click);
             // 
-            // button4
+            // button_eliminar
             // 
-            this.button4.Location = new System.Drawing.Point(606, 384);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_eliminar.Location = new System.Drawing.Point(606, 384);
+            this.button_eliminar.Name = "button_eliminar";
+            this.button_eliminar.Size = new System.Drawing.Size(161, 50);
+            this.button_eliminar.TabIndex = 3;
+            this.button_eliminar.Text = "Eliminar";
+            this.button_eliminar.UseVisualStyleBackColor = true;
+            this.button_eliminar.Click += new System.EventHandler(this.button_eliminar_Click);
             // 
-            // dataGridView1
+            // datos_catedra
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(755, 334);
-            this.dataGridView1.TabIndex = 4;
+            this.datos_catedra.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.datos_catedra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datos_catedra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_catedra,
+            this.Catedra});
+            this.datos_catedra.Location = new System.Drawing.Point(12, 12);
+            this.datos_catedra.Name = "datos_catedra";
+            this.datos_catedra.RowHeadersWidth = 51;
+            this.datos_catedra.RowTemplate.Height = 24;
+            this.datos_catedra.Size = new System.Drawing.Size(755, 334);
+            this.datos_catedra.TabIndex = 4;
+            this.datos_catedra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datos_catedra_CellContentClick);
+            this.datos_catedra.DoubleClick += new System.EventHandler(this.datos_catedra_DoubleClick);
+            // 
+            // id_catedra
+            // 
+            this.id_catedra.HeaderText = "Id_Catedra";
+            this.id_catedra.MinimumWidth = 6;
+            this.id_catedra.Name = "id_catedra";
+            this.id_catedra.Width = 125;
+            // 
+            // Catedra
+            // 
+            this.Catedra.HeaderText = "Catedra";
+            this.Catedra.MinimumWidth = 6;
+            this.Catedra.Name = "Catedra";
+            this.Catedra.Width = 125;
             // 
             // Catedra_lista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 446);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.datos_catedra);
+            this.Controls.Add(this.button_eliminar);
+            this.Controls.Add(this.button_actualizar);
+            this.Controls.Add(this.button_refrescar);
+            this.Controls.Add(this.button_crear);
             this.Name = "Catedra_lista";
             this.Text = "Catedra_lista";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Catedra_lista_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.datos_catedra)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button_crear;
+        private System.Windows.Forms.Button button_refrescar;
+        private System.Windows.Forms.Button button_actualizar;
+        private System.Windows.Forms.Button button_eliminar;
+        private System.Windows.Forms.DataGridView datos_catedra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_catedra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Catedra;
     }
 }
