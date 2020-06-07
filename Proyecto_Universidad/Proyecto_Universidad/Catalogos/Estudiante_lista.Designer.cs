@@ -39,10 +39,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnEliminar.Location = new System.Drawing.Point(600, 379);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(450, 308);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(161, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(121, 41);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -51,10 +50,9 @@
             // btnActualizar
             // 
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnActualizar.Location = new System.Drawing.Point(405, 379);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Location = new System.Drawing.Point(304, 308);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(161, 50);
+            this.btnActualizar.Size = new System.Drawing.Size(121, 41);
             this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -63,10 +61,9 @@
             // btnRefrescar
             // 
             this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnRefrescar.Location = new System.Drawing.Point(213, 379);
-            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefrescar.Location = new System.Drawing.Point(160, 308);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(161, 50);
+            this.btnRefrescar.Size = new System.Drawing.Size(121, 41);
             this.btnRefrescar.TabIndex = 8;
             this.btnRefrescar.Text = "REFRESH";
             this.btnRefrescar.UseVisualStyleBackColor = true;
@@ -75,10 +72,9 @@
             // btnCrear
             // 
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnCrear.Location = new System.Drawing.Point(17, 379);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCrear.Location = new System.Drawing.Point(13, 308);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(161, 50);
+            this.btnCrear.Size = new System.Drawing.Size(121, 41);
             this.btnCrear.TabIndex = 7;
             this.btnCrear.Text = "CREAR";
             this.btnCrear.UseVisualStyleBackColor = true;
@@ -87,27 +83,25 @@
             // data_ListEstu
             // 
             this.data_ListEstu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_ListEstu.Location = new System.Drawing.Point(17, 16);
-            this.data_ListEstu.Margin = new System.Windows.Forms.Padding(4);
+            this.data_ListEstu.Location = new System.Drawing.Point(13, 13);
             this.data_ListEstu.Name = "data_ListEstu";
             this.data_ListEstu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_ListEstu.Size = new System.Drawing.Size(744, 356);
+            this.data_ListEstu.Size = new System.Drawing.Size(558, 289);
             this.data_ListEstu.TabIndex = 6;
             this.data_ListEstu.DoubleClick += new System.EventHandler(this.data_ListEstu_DoubleClick);
             // 
             // Estudiante_lista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 446);
+            this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.data_ListEstu);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Estudiante_lista";
-            this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUD_estudiante";
             this.Load += new System.EventHandler(this.Estudiante_lista_Load);
