@@ -21,6 +21,9 @@ namespace Proyecto_Universidad.Catalogos
         {
             try
             {
+                /*Se abre conexion con BD y se ejecuta proc almacenado CRUD 2 
+                 * Lo que hace es leer los datos que se encuentren a la tabla*/
+
                 SqlCommand com = new SqlCommand("CRUD_tipo", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
@@ -39,6 +42,8 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void bot_refrescar_Click(object sender, EventArgs e)
         {
+            //Acutaliza la ventana si se hizo algun cambio
+
             Tipo_lista_Load(null, null);
         }
         private void bot_eliminar_Click(object sender, EventArgs e)
@@ -63,6 +68,8 @@ namespace Proyecto_Universidad.Catalogos
 
         private void bot_crear_Click(object sender, EventArgs e)
         {
+            /*El evento del btnCrear, hace el llamado a nuestro form crear, donde tenemos actualizar y crear, se ejectua el codigo que tenemos en ese form*/
+
             Tipo_crear ventana = new Tipo_crear();
             ventana.ShowDialog();
             int cod = ventana.id;
@@ -82,7 +89,7 @@ namespace Proyecto_Universidad.Catalogos
             MessageBox.Show("El registro se ha actualizado con exito");
             Tipo_lista_Load(null, null);
         }
-
+        //Evento doble click para que los datos que se encuentra en la fila del datagrid se envien al formulario cobro
         private void grid_datos_DoubleClick(object sender, EventArgs e)
         {
             try
