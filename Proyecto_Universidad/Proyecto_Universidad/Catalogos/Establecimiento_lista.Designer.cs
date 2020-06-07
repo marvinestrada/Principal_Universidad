@@ -142,6 +142,7 @@
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.Name = "Establecimiento_lista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Establecimiento_lista";
             this.Load += new System.EventHandler(this.Establecimiento_lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();

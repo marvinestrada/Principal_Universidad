@@ -18,9 +18,14 @@ namespace Proyecto_Universidad.Catalogos
         }
 
         private void CRUD_Cobros_Lista_Load(object sender, EventArgs e)
+        /*El evento load sirve para cuando se carge la ventana, arranque el siguiente bloque de codigo automaticamente*/
+
         {
             try
             {
+                /*Se abre conexion con BD y se ejecuta proc almacenado CRUD 2 
+                 * Lo que hace es leer los datos que se encuentren a la tabla*/
+
                 SqlCommand com = new SqlCommand("CRUD_cobro", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
@@ -39,12 +44,14 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void bot_refrescar_Click(object sender, EventArgs e)
         {
+            //Acutaliza la ventana ventana por si se hizo algun cambio
             CRUD_Cobros_Lista_Load(null, null);
         }
         private void bot_eliminar_Click(object sender, EventArgs e)
         {
             try
             {
+                /* Se abre conexion con la BD y se ejecuta proc almc CRUD 4 (eliminar) */
                 SqlCommand com = new SqlCommand("CRUD_cobro", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
@@ -62,6 +69,8 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void bot_crear_Click(object sender, EventArgs e)
         {
+            /*El evento del boton crear, hace el llamado a nuestro form crear, donde tenemos actualizar y crar, se ejectua el codigo que tenemos en ese form*/
+
             CRUD_Cobros ventana = new CRUD_Cobros();
             ventana.ShowDialog();
             int cod = ventana.id;
@@ -74,6 +83,9 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
+
+            //Lo mismo en este evento, hace el llamado a nuestro form crear y se ejectua el codigo que tenemos ahi para actualziar los datos.
+
             try
             {
                 CRUD_Cobros ventana = new CRUD_Cobros(Convert.ToInt32(grid_datos.CurrentRow.Cells[1].Value), grid_datos.CurrentRow.Cells[0].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString(), grid_datos.CurrentRow.Cells[3].Value.ToString());
@@ -84,6 +96,7 @@ namespace Proyecto_Universidad.Catalogos
             catch (Exception) { }
         }
 
+        //Evento doble click que esta delegado a que lo realize el formulario CRUD_cobros, lo que se encuentre dentro de este evento se envia para que se ejecute
         private void grid_datos_DoubleClick(object sender, EventArgs e)
         {
             try

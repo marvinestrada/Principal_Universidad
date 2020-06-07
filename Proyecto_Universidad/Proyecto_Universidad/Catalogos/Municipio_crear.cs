@@ -16,10 +16,10 @@ namespace Proyecto_Universidad
         //Variable publica para asignar ID automaticamente a la base de datos
         public int id = 0;
         int Codigo = 0; //En esta variable se iran guardando todos los ID que se esten agregando
-        public Municipio_crear( int codigo = 0, string municipio = "") //Con este metodo se llenan los campos de las tablas de BD
+        public Municipio_crear( int codigo = 0, string municipio = "") //Con este metodo se asignan las variables para los textbox que contendran los datos de la BD
         {
             InitializeComponent();
-            Codigo = codigo;                /*Reemplazo variables*/
+            Codigo = codigo;                /*Asigno variables a los textbox, seran igual a lo que contenga las variables*/
             txtmunicipio.Text = municipio;
         }
         private void btn_aceptar_Click(object sender, System.EventArgs e) //Evento click boton Aceptar

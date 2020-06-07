@@ -41,6 +41,7 @@
             // 
             // bot_eliminar
             // 
+            this.bot_eliminar.FlatAppearance.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.bot_eliminar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bot_eliminar.Location = new System.Drawing.Point(525, 356);
             this.bot_eliminar.Margin = new System.Windows.Forms.Padding(4);
@@ -91,6 +92,8 @@
             // 
             this.grid_datos.AllowUserToAddRows = false;
             this.grid_datos.AllowUserToDeleteRows = false;
+            this.grid_datos.BackgroundColor = System.Drawing.Color.Firebrick;
+            this.grid_datos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid_datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_ciclo,
@@ -132,6 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Crimson;
             this.ClientSize = new System.Drawing.Size(682, 418);
             this.Controls.Add(this.bot_eliminar);
             this.Controls.Add(this.bot_actualizar);
@@ -139,9 +143,11 @@
             this.Controls.Add(this.bot_crear);
             this.Controls.Add(this.grid_datos);
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
             this.Name = "Ciclos_lista";
             this.Padding = new System.Windows.Forms.Padding(11);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Ciclos";
             this.Load += new System.EventHandler(this.Ciclos_lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();

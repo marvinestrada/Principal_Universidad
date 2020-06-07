@@ -146,6 +146,7 @@
             this.Controls.Add(this.btn_aceptar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CRUD_pagos_crear";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUD_pagos_crear";
             this.ResumeLayout(false);
             this.PerformLayout();
