@@ -230,6 +230,7 @@
             this.Name = "Matricula_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Matricula_form";
+
             this.ResumeLayout(false);
             this.PerformLayout();
 

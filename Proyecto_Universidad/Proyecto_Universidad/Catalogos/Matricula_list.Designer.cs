@@ -106,15 +106,18 @@
             this.grid_datos.Margin = new System.Windows.Forms.Padding(4);
             this.grid_datos.Name = "grid_datos";
             this.grid_datos.ReadOnly = true;
+            this.grid_datos.RowHeadersWidth = 51;
             this.grid_datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_datos.Size = new System.Drawing.Size(651, 334);
             this.grid_datos.TabIndex = 10;
+            this.grid_datos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_datos_CellContentClick);
             this.grid_datos.DoubleClick += new System.EventHandler(this.grid__DoubleClick);
             // 
             // Id_Matricula
             // 
             this.Id_Matricula.DataPropertyName = "Id_matricula";
             this.Id_Matricula.HeaderText = "Cod. Matricula";
+            this.Id_Matricula.MinimumWidth = 6;
             this.Id_Matricula.Name = "Id_Matricula";
             this.Id_Matricula.ReadOnly = true;
             this.Id_Matricula.Width = 150;
@@ -123,6 +126,7 @@
             // 
             this.Id_estudiante.DataPropertyName = "Id_estudiante";
             this.Id_estudiante.HeaderText = "Cod. Estudiante";
+            this.Id_estudiante.MinimumWidth = 6;
             this.Id_estudiante.Name = "Id_estudiante";
             this.Id_estudiante.ReadOnly = true;
             this.Id_estudiante.Width = 200;
@@ -131,29 +135,37 @@
             // 
             this.Establecimiento.DataPropertyName = "Id_establecimiento";
             this.Establecimiento.HeaderText = "Cod. Establecimiento";
+            this.Establecimiento.MinimumWidth = 6;
             this.Establecimiento.Name = "Establecimiento";
             this.Establecimiento.ReadOnly = true;
+            this.Establecimiento.Width = 125;
             // 
             // Id_tipo
             // 
             this.Id_tipo.DataPropertyName = "Id_tipo";
             this.Id_tipo.HeaderText = "Cod. Tipo";
+            this.Id_tipo.MinimumWidth = 6;
             this.Id_tipo.Name = "Id_tipo";
             this.Id_tipo.ReadOnly = true;
+            this.Id_tipo.Width = 125;
             // 
             // Id_ciclo
             // 
             this.Id_ciclo.DataPropertyName = "Id_ciclo";
             this.Id_ciclo.HeaderText = "Cod. Ciclo";
+            this.Id_ciclo.MinimumWidth = 6;
             this.Id_ciclo.Name = "Id_ciclo";
             this.Id_ciclo.ReadOnly = true;
+            this.Id_ciclo.Width = 125;
             // 
             // Fecha_matricula
             // 
             this.Fecha_matricula.DataPropertyName = "Fecha_matricula";
             this.Fecha_matricula.HeaderText = "Fecha";
+            this.Fecha_matricula.MinimumWidth = 6;
             this.Fecha_matricula.Name = "Fecha_matricula";
             this.Fecha_matricula.ReadOnly = true;
+            this.Fecha_matricula.Width = 125;
             // 
             // Matricula_list
             // 

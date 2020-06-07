@@ -11,23 +11,23 @@ using System.Windows.Forms;
 
 namespace Proyecto_Universidad.Catalogos
 {
-    public partial class Carrera_lista : Form
+    public partial class Carrera_Cat_List : Form
     {
         public delegate void pasar(string datos);
         //Evento que lo va ejecutar
         public event pasar pasado;
 
-        public Carrera_lista()
+        public Carrera_Cat_List()
         {
             InitializeComponent();
         }
 
-        private void Carrera_lista_Load(object sender, EventArgs e)
+        private void Carrera_Cat_List_Load(object sender, EventArgs e)
         {
+
             try
             {
-             
-                SqlCommand com = new SqlCommand("CRUD_Carrera", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_Carrera_catedra", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
                 DataTable DT = new DataTable();
@@ -35,66 +35,66 @@ namespace Proyecto_Universidad.Catalogos
                 SqlDataAdapter DA = new SqlDataAdapter(com);
                 DA.Fill(DT);
                 Conn.sqlconeccion.Close();
-                datos_carrera.DataSource = DT;
+                grid_datos.DataSource = DT;
             }
-            catch (Exception ee)
+            catch (Exception)
             {
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
-            boton_actualizar.Enabled = false;
+
+
+        }
+
+        private void boton_actualizar_Click(object sender, EventArgs e)
+        {
+            Carrera_Cat_List_Load(null, null);
         }
 
         private void boton_crear_Click(object sender, EventArgs e)
         {
-            Carrera_crear ventana = new Carrera_crear();
+            Carrera_Cat ventana = new Carrera_Cat();
             ventana.ShowDialog();
             int cod = ventana.id;
             ventana.Dispose();
             if (cod != 0)
             {
-                MessageBox.Show("Se ha registrado: " + cod);
+                MessageBox.Show("Se ha creado un registro con Id: " + cod);
             }
-            Carrera_lista_Load(null, null);
-        }
-
-        private void boton_refrescar_Click(object sender, EventArgs e)
-        {
-            Carrera_lista_Load(null, null);
-        }
-
-        private void boton_actualizar_Click(object sender, EventArgs e)
-        {
-            Carrera_crear ventana = new Carrera_crear(Convert.ToInt32(datos_carrera.CurrentRow.Cells[1].Value), datos_carrera.CurrentRow.Cells[0].Value.ToString());
-            ventana.ShowDialog();
-            ventana.Dispose();
-            MessageBox.Show("El registro se ha actualizado con exito");
-            Carrera_lista_Load(null, null);
+            Carrera_Cat_List_Load(null, null);
         }
 
         private void boton_eliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand com = new SqlCommand("CRUD_Carrera", Conn.sqlconeccion);
+                SqlCommand com = new SqlCommand("CRUD_Carrera_catedra", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_carrera", datos_carrera.CurrentRow.Cells[1].Value.ToString()); /*Se tiene que eliminar de la BD el id de la tabla, ya que si no se borra puede crear conflictos*/
+                com.Parameters.AddWithValue("Id_carrera_cat", grid_datos.CurrentRow.Cells[0].Value.ToString());
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
             }
-            catch (Exception ee)
+            catch (Exception)
             {
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
-            Carrera_lista_Load(null, null);
+            Carrera_Cat_List_Load(null, null);
         }
 
-        private void datos_carrera_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void grid_datos_DoubleClick(object sender, EventArgs e)
         {
-            boton_actualizar.Enabled = true;
+            try
+            {
+                pasado(grid_datos.CurrentRow.Cells[0].Value.ToString());
+                this.Dispose();
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

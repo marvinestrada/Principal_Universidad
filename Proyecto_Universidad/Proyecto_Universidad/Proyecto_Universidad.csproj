@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Carrera_Cat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Carrera_Cat.Designer.cs">
+      <DependentUpon>Carrera_Cat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Carrera_Cat_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Carrera_Cat_List.Designer.cs">
+      <DependentUpon>Carrera_Cat_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Carrera_crear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +69,12 @@
     </Compile>
     <Compile Include="Catalogos\Carrera_lista.Designer.cs">
       <DependentUpon>Carrera_lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Catedra_crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Catedra_crear.Designer.cs">
+      <DependentUpon>Catedra_crear.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Catedra_lista.cs">
       <SubType>Form</SubType>
@@ -211,11 +229,20 @@
     <Compile Include="Catalogos\Ciclos_form.Designer.cs">
       <DependentUpon>Ciclos_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Catalogos\Carrera_Cat.resx">
+      <DependentUpon>Carrera_Cat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Carrera_Cat_List.resx">
+      <DependentUpon>Carrera_Cat_List.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Carrera_crear.resx">
       <DependentUpon>Carrera_crear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Carrera_lista.resx">
       <DependentUpon>Carrera_lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Catedra_crear.resx">
+      <DependentUpon>Catedra_crear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Catedra_lista.resx">
       <DependentUpon>Catedra_lista.cs</DependentUpon>

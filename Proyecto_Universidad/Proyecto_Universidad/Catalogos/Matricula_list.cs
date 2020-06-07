@@ -97,6 +97,11 @@ namespace Proyecto_Universidad.Catalogos
             }
 
         }
+
+        private void grid_datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 
