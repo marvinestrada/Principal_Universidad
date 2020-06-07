@@ -105,5 +105,10 @@ namespace Proyecto_Universidad
             }
             catch (Exception) { }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

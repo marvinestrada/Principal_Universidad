@@ -35,14 +35,14 @@ namespace Proyecto_Universidad.Catalogos
                 SqlDataAdapter DA = new SqlDataAdapter(com);
                 DA.Fill(DT);
                 Conn.sqlconeccion.Close();
-                datos_carrera.DataSource = DT;
+                grid_datos.DataSource = DT;
             }
             catch (Exception ee)
             {
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
-            boton_actualizar.Enabled = false;
+            bot_actualizar.Enabled = false;
         }
 
         private void boton_crear_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace Proyecto_Universidad.Catalogos
 
         private void boton_actualizar_Click(object sender, EventArgs e)
         {
-            Carrera_crear ventana = new Carrera_crear(Convert.ToInt32(datos_carrera.CurrentRow.Cells[1].Value), datos_carrera.CurrentRow.Cells[0].Value.ToString());
+            Carrera_crear ventana = new Carrera_crear(Convert.ToInt32(grid_datos.CurrentRow.Cells[1].Value), grid_datos.CurrentRow.Cells[0].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
@@ -79,7 +79,7 @@ namespace Proyecto_Universidad.Catalogos
                 SqlCommand com = new SqlCommand("CRUD_Carrera", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_carrera", datos_carrera.CurrentRow.Cells[1].Value.ToString()); /*Se tiene que eliminar de la BD el id de la tabla, ya que si no se borra puede crear conflictos*/
+                com.Parameters.AddWithValue("Id_carrera", grid_datos.CurrentRow.Cells[1].Value.ToString()); /*Se tiene que eliminar de la BD el id de la tabla, ya que si no se borra puede crear conflictos*/
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -94,7 +94,7 @@ namespace Proyecto_Universidad.Catalogos
 
         private void datos_carrera_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            boton_actualizar.Enabled = true;
+            bot_actualizar.Enabled = true;
         }
     }
 }

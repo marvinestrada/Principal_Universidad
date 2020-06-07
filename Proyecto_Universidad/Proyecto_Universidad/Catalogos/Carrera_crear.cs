@@ -56,9 +56,9 @@ namespace Proyecto_Universidad.Catalogos
             this.Close();
         }
 
-        private void Carrera_crear_Load(object sender, EventArgs e)
+        private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
     }
 }

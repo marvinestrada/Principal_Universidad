@@ -42,7 +42,7 @@ namespace Proyecto_Universidad.Catalogos
 
         private void button_actualizar_Click(object sender, EventArgs e)
         {
-            Catedra_crear ventana = new Catedra_crear(Convert.ToInt32(datos_catedra.CurrentRow.Cells[1].Value), datos_catedra.CurrentRow.Cells[0].Value.ToString());
+            Catedra_crear ventana = new Catedra_crear(Convert.ToInt32(grid_datos.CurrentRow.Cells[1].Value), grid_datos.CurrentRow.Cells[0].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
@@ -56,7 +56,7 @@ namespace Proyecto_Universidad.Catalogos
                 SqlCommand com = new SqlCommand("CRUD_Catedra", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_catedra", datos_catedra.CurrentRow.Cells[1].Value.ToString()); /*Se tiene que eliminar de la BD el id de la tabla, ya que si no se borra puede crear conflictos*/
+                com.Parameters.AddWithValue("Id_catedra", grid_datos.CurrentRow.Cells[1].Value.ToString()); /*Se tiene que eliminar de la BD el id de la tabla, ya que si no se borra puede crear conflictos*/
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -71,7 +71,7 @@ namespace Proyecto_Universidad.Catalogos
 
         private void datos_catedra_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            button_actualizar.Enabled = true;
+            bot_actualizar.Enabled = true;
         }
 
         private void Catedra_lista_Load(object sender, EventArgs e)
@@ -87,19 +87,24 @@ namespace Proyecto_Universidad.Catalogos
                 SqlDataAdapter DA = new SqlDataAdapter(com);
                 DA.Fill(DT);
                 Conn.sqlconeccion.Close();
-                datos_catedra.DataSource = DT;
+                grid_datos.DataSource = DT;
             }
             catch (Exception ee)
             {
                 Conn.sqlconeccion.Close();
                 MessageBox.Show("Ha ocurrido un error");
             }
-            button_actualizar.Enabled = false;
+            bot_actualizar.Enabled = false;
         }
 
         private void datos_catedra_DoubleClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

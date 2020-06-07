@@ -95,5 +95,10 @@ namespace Proyecto_Universidad.Catalogos
 
             }
 }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

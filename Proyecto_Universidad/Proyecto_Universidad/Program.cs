@@ -18,7 +18,7 @@ namespace Proyecto_Universidad
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Ciclos_lista ());
+            Application.Run(new Ciclos_lista());
 
         }
     }
