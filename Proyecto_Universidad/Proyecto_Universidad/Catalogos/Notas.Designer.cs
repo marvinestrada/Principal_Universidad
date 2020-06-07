@@ -47,7 +47,7 @@
             this.btnModN = new System.Windows.Forms.Button();
             this.btnalirN = new System.Windows.Forms.Button();
             this.btnRefreshN = new System.Windows.Forms.Button();
-            this.btnaceptarN = new System.Windows.Forms.Button();
+            this.btnCrearN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataNota)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -201,6 +201,7 @@
             this.btnModN.TabIndex = 2;
             this.btnModN.Text = "Modificar";
             this.btnModN.UseVisualStyleBackColor = true;
+            this.btnModN.Click += new System.EventHandler(this.btnModN_Click);
             // 
             // btnalirN
             // 
@@ -222,22 +223,22 @@
             this.btnRefreshN.Text = "Refrescar";
             this.btnRefreshN.UseVisualStyleBackColor = true;
             // 
-            // btnaceptarN
+            // btnCrearN
             // 
-            this.btnaceptarN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnaceptarN.Location = new System.Drawing.Point(397, 359);
-            this.btnaceptarN.Name = "btnaceptarN";
-            this.btnaceptarN.Size = new System.Drawing.Size(97, 35);
-            this.btnaceptarN.TabIndex = 5;
-            this.btnaceptarN.Text = "Aceptar";
-            this.btnaceptarN.UseVisualStyleBackColor = true;
+            this.btnCrearN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnCrearN.Location = new System.Drawing.Point(397, 359);
+            this.btnCrearN.Name = "btnCrearN";
+            this.btnCrearN.Size = new System.Drawing.Size(97, 35);
+            this.btnCrearN.TabIndex = 5;
+            this.btnCrearN.Text = "Crear";
+            this.btnCrearN.UseVisualStyleBackColor = true;
             // 
             // Notas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 402);
-            this.Controls.Add(this.btnaceptarN);
+            this.Controls.Add(this.btnCrearN);
             this.Controls.Add(this.btnRefreshN);
             this.Controls.Add(this.btnalirN);
             this.Controls.Add(this.btnModN);
@@ -274,6 +275,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Promovido;
         private System.Windows.Forms.Button btnRefreshN;
-        private System.Windows.Forms.Button btnaceptarN;
+        private System.Windows.Forms.Button btnCrearN;
     }
 }
