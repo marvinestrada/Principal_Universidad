@@ -151,6 +151,7 @@
             this.MaximizeBox = false;
             this.Name = "Profesor_crear";
             this.Padding = new System.Windows.Forms.Padding(10);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profesor_crear";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -97,6 +97,7 @@
             this.Controls.Add(this.data_ListPro);
             this.MaximizeBox = false;
             this.Name = "Profesor_lista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profesor_lista";
             this.Load += new System.EventHandler(this.Profesor_lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_ListPro)).EndInit();
