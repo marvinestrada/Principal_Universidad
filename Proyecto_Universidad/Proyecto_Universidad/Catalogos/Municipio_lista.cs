@@ -88,5 +88,10 @@ namespace Proyecto_Universidad
         {
             bot_actualizar.Enabled = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

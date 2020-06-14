@@ -28,14 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnRefrescar = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.data_ListEstu = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.data_ListEstu)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.bot_eliminar = new System.Windows.Forms.Button();
+            this.bot_actualizar = new System.Windows.Forms.Button();
+            this.bot_refrescar = new System.Windows.Forms.Button();
+            this.bot_crear = new System.Windows.Forms.Button();
+            this.grid_datos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dir = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).BeginInit();
             this.SuspendLayout();
             // 
+
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -102,20 +112,27 @@
             this.Controls.Add(this.data_ListEstu);
             this.Name = "Estudiante_lista";
             this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUD_estudiante";
             this.Load += new System.EventHandler(this.Estudiante_lista_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.data_ListEstu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnRefrescar;
-        private System.Windows.Forms.Button btnCrear;
-        public System.Windows.Forms.DataGridView data_ListEstu;
+        private System.Windows.Forms.Button bot_eliminar;
+        private System.Windows.Forms.Button bot_actualizar;
+        private System.Windows.Forms.Button bot_refrescar;
+        private System.Windows.Forms.Button bot_crear;
+        public System.Windows.Forms.DataGridView grid_datos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tel;
+        private System.Windows.Forms.Button button1;
     }
 }

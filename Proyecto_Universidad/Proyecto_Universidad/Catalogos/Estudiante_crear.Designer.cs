@@ -36,76 +36,91 @@
             this.txtdir = new System.Windows.Forms.TextBox();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 19);
+
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombres:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+
             this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(24, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 19);
+
             this.label4.TabIndex = 6;
             this.label4.Text = "Teléfono:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(24, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 19);
+
             this.label3.TabIndex = 5;
             this.label3.Text = "Dirección:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 19);
+
             this.label2.TabIndex = 4;
             this.label2.Text = "Apellidos:";
             // 
             // txtTel
             // 
+
             this.txtTel.Location = new System.Drawing.Point(135, 124);
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(302, 26);
+
             this.txtTel.TabIndex = 13;
             // 
             // txtdir
             // 
+
             this.txtdir.Location = new System.Drawing.Point(135, 91);
             this.txtdir.Multiline = true;
             this.txtdir.Name = "txtdir";
             this.txtdir.Size = new System.Drawing.Size(302, 26);
+
             this.txtdir.TabIndex = 12;
             // 
             // txtapellido
             // 
+
             this.txtapellido.Location = new System.Drawing.Point(135, 59);
             this.txtapellido.Multiline = true;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(302, 26);
+
             this.txtapellido.TabIndex = 11;
             // 
             // txtNom
             // 
+
             this.txtNom.Location = new System.Drawing.Point(135, 28);
             this.txtNom.Multiline = true;
             this.txtNom.Name = "txtNom";
@@ -148,9 +163,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+
             this.MaximizeBox = false;
             this.Name = "Estudiante_crear";
             this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Estudiante";
             this.ResumeLayout(false);
@@ -168,7 +185,7 @@
         private System.Windows.Forms.TextBox txtdir;
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.TextBox txtNom;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.Button btn_aceptar;
     }
 }

@@ -31,7 +31,7 @@ namespace Proyecto_Universidad.Catalogos
                 SqlDataAdapter DA = new SqlDataAdapter(com);
                 DA.Fill(DT);
                 Conn.sqlconeccion.Close();
-                data_ListPro.DataSource = DT;
+                grid_datos.DataSource = DT;
             }
             catch (Exception ee)
             {
@@ -51,7 +51,7 @@ namespace Proyecto_Universidad.Catalogos
                 SqlCommand com = new SqlCommand("CRUD_Profesor", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 4);
-                com.Parameters.AddWithValue("Id_profesor", data_ListPro.CurrentRow.Cells[0].Value.ToString());
+                com.Parameters.AddWithValue("Id_profesor", grid_datos.CurrentRow.Cells[0].Value.ToString());
                 Conn.sqlconeccion.Open();
                 com.ExecuteNonQuery();
                 Conn.sqlconeccion.Close();
@@ -78,15 +78,18 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void bot_actualizar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(data_ListPro.CurrentRow.Cells[1].Value.ToString());
-            Profesor_crear ventana = new Profesor_crear(Convert.ToInt32(data_ListPro.CurrentRow.Cells[0].Value), data_ListPro.CurrentRow.Cells[1].Value.ToString(), data_ListPro.CurrentRow.Cells[2].Value.ToString());
+            MessageBox.Show(grid_datos.CurrentRow.Cells[1].Value.ToString());
+            Profesor_crear ventana = new Profesor_crear(Convert.ToInt32(grid_datos.CurrentRow.Cells[0].Value), grid_datos.CurrentRow.Cells[1].Value.ToString(), grid_datos.CurrentRow.Cells[2].Value.ToString());
             ventana.ShowDialog();
             ventana.Dispose();
             MessageBox.Show("El registro se ha actualizado con exito");
             Profesor_lista_Load(null, null);
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
 
