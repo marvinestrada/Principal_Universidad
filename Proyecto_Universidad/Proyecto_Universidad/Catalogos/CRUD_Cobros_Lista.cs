@@ -106,5 +106,11 @@ namespace Proyecto_Universidad.Catalogos
             }
             catch (Exception) { }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
     }
 }

@@ -98,9 +98,9 @@ namespace Proyecto_Universidad.Catalogos
 
         }
 
-        private void grid_datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
     }
 }

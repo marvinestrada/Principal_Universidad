@@ -22,11 +22,6 @@ namespace Proyecto_Universidad.Catalogos
             txtcarrera.Text = musica;
         }
 
-        private void Catedra_crear_Load(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             if (Codigo != 0)
@@ -59,6 +54,11 @@ namespace Proyecto_Universidad.Catalogos
                 Conn.sqlconeccion.Close();
             }
             this.Close();
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

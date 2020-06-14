@@ -36,18 +36,20 @@
             // 
             // txtcarrera
             // 
-            this.txtcarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtcarrera.Location = new System.Drawing.Point(101, 17);
+            this.txtcarrera.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcarrera.ForeColor = System.Drawing.Color.Black;
+            this.txtcarrera.Location = new System.Drawing.Point(117, 17);
             this.txtcarrera.Margin = new System.Windows.Forms.Padding(4);
             this.txtcarrera.Multiline = true;
             this.txtcarrera.Name = "txtcarrera";
-            this.txtcarrera.Size = new System.Drawing.Size(505, 32);
+            this.txtcarrera.Size = new System.Drawing.Size(489, 32);
             this.txtcarrera.TabIndex = 16;
             // 
             // label_carrera
             // 
-            this.label_carrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label_carrera.Location = new System.Drawing.Point(13, 17);
+            this.label_carrera.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_carrera.ForeColor = System.Drawing.Color.White;
+            this.label_carrera.Location = new System.Drawing.Point(18, 20);
             this.label_carrera.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_carrera.Name = "label_carrera";
             this.label_carrera.Size = new System.Drawing.Size(91, 32);
@@ -56,39 +58,50 @@
             // 
             // btn_cerrar
             // 
-            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cerrar.Location = new System.Drawing.Point(445, 593);
+            this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(99)))), ((int)(((byte)(172)))));
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cerrar.ForeColor = System.Drawing.Color.White;
+            this.btn_cerrar.Location = new System.Drawing.Point(473, 606);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(161, 50);
-            this.btn_cerrar.TabIndex = 14;
+            this.btn_cerrar.Size = new System.Drawing.Size(131, 40);
+            this.btn_cerrar.TabIndex = 12;
             this.btn_cerrar.Text = "CANCELAR";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.UseVisualStyleBackColor = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_aceptar.Location = new System.Drawing.Point(276, 593);
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(99)))), ((int)(((byte)(172)))));
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_aceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aceptar.ForeColor = System.Drawing.Color.White;
+            this.btn_aceptar.Location = new System.Drawing.Point(335, 606);
             this.btn_aceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Size = new System.Drawing.Size(161, 50);
-            this.btn_aceptar.TabIndex = 13;
+            this.btn_aceptar.Size = new System.Drawing.Size(130, 40);
+            this.btn_aceptar.TabIndex = 11;
             this.btn_aceptar.Text = "ACEPTAR";
-            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.UseVisualStyleBackColor = false;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // Catedra_crear
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(619, 661);
             this.Controls.Add(this.txtcarrera);
             this.Controls.Add(this.label_carrera);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_aceptar);
+            this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
             this.Name = "Catedra_crear";
-            this.Text = "Catedra_crear";
-            this.Load += new System.EventHandler(this.Catedra_crear_Load);
+            this.Padding = new System.Windows.Forms.Padding(11);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ingreso y Modificación";
             this.ResumeLayout(false);
             this.PerformLayout();
 
