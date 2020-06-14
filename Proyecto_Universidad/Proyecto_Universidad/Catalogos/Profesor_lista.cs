@@ -7,6 +7,7 @@ namespace Proyecto_Universidad.Catalogos
 {
     public partial class Profesor_lista : Form
     {
+        //Delegado para ejecutar un evento, pasar los datos del datagrid al formulario matricula con un parametro
         public delegate void pasar(string datos);
         //Evento que lo va ejecutar
         public event pasar pasado;
@@ -19,6 +20,9 @@ namespace Proyecto_Universidad.Catalogos
         {
             try
             {
+                /*Se abre conexion con BD y se ejecuta proc almacenado CRUD 2 
+                 * Lo que hace es leer los datos que se encuentren a la tabla*/
+
                 SqlCommand com = new SqlCommand("CRUD_Profesor", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
@@ -37,6 +41,7 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void btnRefrescarPro_Click(object sender, EventArgs e)
         {
+            //Acutaliza la ventana si se hizo algun cambio
             Profesor_lista_Load(null, null);
         }
         private void btnEliminarPro_Click(object sender, EventArgs e)
@@ -60,6 +65,7 @@ namespace Proyecto_Universidad.Catalogos
         }
         private void bot_crear_Click(object sender, EventArgs e)
         {
+            /*El evento del btnCrear, hace el llamado a nuestro form crear, donde tenemos actualizar y crear, se ejectua el codigo que tenemos en ese form*/
             Profesor_crear ventana = new Profesor_crear();
             ventana.ShowDialog();
             int cod = ventana.id;

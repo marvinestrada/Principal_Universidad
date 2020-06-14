@@ -169,9 +169,11 @@
             this.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.Name = "Profesor_crear";
-            this.Padding = new System.Windows.Forms.Padding(11);
+
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Profesor crear";
+            this.Text = "Profesor_crear";
+
             this.ResumeLayout(false);
             this.PerformLayout();
 

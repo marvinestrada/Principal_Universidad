@@ -22,6 +22,9 @@ namespace Proyecto_Universidad
         {
             try
             {
+                /*Se abre conexion con BD y se ejecuta proc almacenado CRUD 2 
+                 * Lo que hace es leer los datos que se encuentren a la tabla*/
+
                 SqlCommand com = new SqlCommand("CRUD_estudiante", Conn.sqlconeccion);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("CRUD", 2);
@@ -40,6 +43,8 @@ namespace Proyecto_Universidad
         }
         private void bot_refrescar_Click(object sender, EventArgs e)
         {
+            //Acutaliza la ventana si se hizo algun cambio
+
             Estudiante_lista_Load(null, null);
         }
         private void bot_eliminar_Click(object sender, EventArgs e)
@@ -63,6 +68,8 @@ namespace Proyecto_Universidad
         }
         private void bot_crear_Click(object sender, EventArgs e)
         {
+            /*El evento del btnCrear, hace el llamado a nuestro form crear, donde tenemos actualizar y crear, se ejectua el codigo que tenemos en ese form*/
+
             Estudiante_crear ventana = new Estudiante_crear();
             ventana.ShowDialog();
             int cod = ventana.id;

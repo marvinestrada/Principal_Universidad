@@ -199,9 +199,10 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
             this.Name = "Profesor_lista";
-            this.Padding = new System.Windows.Forms.Padding(11);
+
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista de profesores";
+            this.Text = "Profesor_lista";
+
             this.Load += new System.EventHandler(this.Profesor_lista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_datos)).EndInit();
             this.ResumeLayout(false);
